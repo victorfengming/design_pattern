@@ -22,6 +22,16 @@ package com.atguigu.principle.Segregation;
 public class Segregation2 {
     public static void main(String[] args) {
         // todo gen
+        A2 a2 = new A2();
+        a2.depend1(new B2());
+        a2.depend2(new B2());
+        a2.depend3(new B2());
+
+        C2 c2 = new C2();
+        c2.depend1(new D2());
+        c2.depend4(new D2());
+        c2.depend5(new D2());
+
     }
 }
 
