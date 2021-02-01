@@ -1,4 +1,4 @@
-package com.atguigu.principle;
+package com.atguigu.principle.singleResponsibility;
 
 /**
  * ClassName: SingleResponsiblity1 <br/>
