@@ -19,23 +19,28 @@ package com.atguigu.principle.Segregation;
 *
 *
 * */
-public class Segregation1 {
+public class Segregation2 {
     public static void main(String[] args) {
         // todo gen
     }
 }
 
-interface Interface1_Old{
-
+interface Interface1{
     void operation1();
+}
+interface Interface2{
+
     void operation2();
     void operation3();
+}
+interface Interface3{
+
     void operation4();
     void operation5();
 }
 
 
-class B implements Interface1_Old{
+class B2 implements Interface1,Interface2{
 
     @Override
     public void operation1() {
@@ -52,33 +57,13 @@ class B implements Interface1_Old{
         System.out.println(" b 实现了3 ");
     }
 
-    @Override
-    public void operation4() {
-        System.out.println(" b 实现了 4");
-    }
-
-    @Override
-    public void operation5() {
-        System.out.println(" b" +
-                "s实现了 5");
-    }
 }
 
-class D implements Interface1_Old{
+class D2 implements Interface1,Interface3{
 
     @Override
     public void operation1() {
         System.out.println("d实现了1");
-    }
-
-    @Override
-    public void operation2() {
-        System.out.println("d实现了2");
-    }
-
-    @Override
-    public void operation3() {
-        System.out.println("d实现了3");
     }
 
     @Override
@@ -92,32 +77,31 @@ class D implements Interface1_Old{
     }
 }
 
-class C {
+class C2 {
     // c这个类通过接口 依赖使用d类
     // 但是只是用到了 1,4,5 方法
-    public void depend1(Interface1_Old interface1) {
+    public void depend1(Interface1 interface1) {
         interface1.operation1();
     }
 
-    public void depend4(Interface1_Old interface1) {
-        interface1.operation4();
+    public void depend4(Interface3 interface3) {
+        interface3.operation4();
     }
-    public void depend5(Interface1_Old interface1) {
-        interface1.operation5();
+    public void depend5(Interface3 interface3) {
+        interface3.operation5();
     }
 }
 
-class A{
+class A2{
         // c这个类通过接口 依赖使用d类
     // 但是只是用到了 1,2,3 方法
-    public void depend1(Interface1_Old interface1) {
+    public void depend1(Interface1 interface1) {
         interface1.operation1();
     }
-
-    public void depend2(Interface1_Old interface1) {
-        interface1.operation2();
+    public void depend2(Interface2 interface2) {
+        interface2.operation2();
     }
-    public void depend3(Interface1_Old interface1) {
-        interface1.operation3();
+    public void depend3(Interface2 interface2) {
+        interface2.operation3();
     }
 }
