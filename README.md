@@ -3,6 +3,8 @@
 #### 介绍
 java 设计模式
 
+https://www.bilibili.com/video/BV1G4411c7N4
+
 #### 软件架构
 软件架构说明
 
