@@ -16,9 +16,9 @@ package com.atguigu.principle.Segregation;
  */
 
 /*
-*
-*
-* */
+ *
+ *
+ * */
 public class Segregation2 {
     public static void main(String[] args) {
         // todo gen
@@ -35,22 +35,24 @@ public class Segregation2 {
     }
 }
 
-interface Interface1{
+interface Interface1 {
     void operation1();
 }
-interface Interface2{
 
+interface Interface2 {
     void operation2();
+
     void operation3();
 }
-interface Interface3{
 
+interface Interface3 {
     void operation4();
+
     void operation5();
 }
 
 
-class B2 implements Interface1,Interface2{
+class B2 implements Interface1, Interface2 {
 
     @Override
     public void operation1() {
@@ -69,7 +71,7 @@ class B2 implements Interface1,Interface2{
 
 }
 
-class D2 implements Interface1,Interface3{
+class D2 implements Interface1, Interface3 {
 
     @Override
     public void operation1() {
@@ -97,20 +99,23 @@ class C2 {
     public void depend4(Interface3 interface3) {
         interface3.operation4();
     }
+
     public void depend5(Interface3 interface3) {
         interface3.operation5();
     }
 }
 
-class A2{
-        // c这个类通过接口 依赖使用d类
+class A2 {
+    // c这个类通过接口 依赖使用d类
     // 但是只是用到了 1,2,3 方法
     public void depend1(Interface1 interface1) {
         interface1.operation1();
     }
+
     public void depend2(Interface2 interface2) {
         interface2.operation2();
     }
+
     public void depend3(Interface2 interface2) {
         interface2.operation3();
     }
