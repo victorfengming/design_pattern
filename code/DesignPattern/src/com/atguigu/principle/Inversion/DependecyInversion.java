@@ -20,6 +20,7 @@ public class DependecyInversion {
         // 客户端无需改变
         Person p = new Person();
         p.receive(new Email());
+        p.receive(new WeiXin());
 
     }
 
@@ -30,12 +31,21 @@ interface IReceiver{
     public String getInfo();
 }
 class Email implements IReceiver{
+
+    @Override
     public String getInfo() {
         return " 电子邮件信息:hellworld";
     }
 
 }
+// 增加微信
+class WeiXin implements IReceiver{
 
+    @Override
+    public String getInfo() {
+        return "微信 null";
+    }
+}
 
 /*
 完成 Person 接收消息功能
@@ -43,6 +53,7 @@ class Email implements IReceiver{
 
 * */
 class Person{
+    // 这里我们是对 接口的依赖
     public void receive(IReceiver iReceiver) {
         System.out.println(iReceiver.getInfo());
     }
