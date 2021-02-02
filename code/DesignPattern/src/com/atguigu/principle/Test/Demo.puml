@@ -1,31 +1,28 @@
 @startuml
-class Foo1 {
-  You can use
-  several lines
-  ..
-  as you want
-  and group
-  ==
-  things together.
-  __
-  You can have as many groups
-  as you want
-  --
-  End of class
+
+abstract class AbstractList
+abstract AbstractCollection
+interface List
+interface Collection
+
+List <|-- AbstractList
+Collection <|-- AbstractCollection
+
+Collection <|- List
+AbstractCollection <|- AbstractList
+AbstractList <|-- ArrayList
+
+class ArrayList {
+  Object[] elementData
+  size()
 }
 
-class User {
-  .. Simple Getter ..
-  + getName()
-  + getAddress()
-  .. Some setter ..
-  + setName()
-  __ private data __
-  int age
-  -- encrypted --
-  String password
+enum TimeUnit {
+  DAYS
+  HOURS
+  MINUTES
 }
+
+annotation SuppressWarnings
 
 @enduml
-
-/' 这个插件 是将这个 代码 转换成 这个 类图的 哦'/
