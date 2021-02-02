@@ -11,10 +11,23 @@ package com.atguigu.principle.singleton.type06;
  */
 public class SingletonTest06 {
     public static void main(String[] args) {
+        System.out.println("双重检查!");
         Singleton ins = Singleton.getInstance();
+        Singleton ins2 = Singleton.getInstance();
         System.out.println(ins);
-        // E:\env\jdk1.8.0_162\bin\java.exe -javaagent:E:\ide\JetBrains\IntelliJIDEA2019.2\lib\idea_rt.jar=58016:E:\ide\JetBrains\IntelliJIDEA2019.2\bin -Dfile.encoding=UTF-8 -classpath E:\env\jdk1.8.0_162\jre\lib\charsets.jar;E:\env\jdk1.8.0_162\jre\lib\deploy.jar;E:\env\jdk1.8.0_162\jre\lib\ext\access-bridge-64.jar;E:\env\jdk1.8.0_162\jre\lib\ext\cldrdata.jar;E:\env\jdk1.8.0_162\jre\lib\ext\dnsns.jar;E:\env\jdk1.8.0_162\jre\lib\ext\jaccess.jar;E:\env\jdk1.8.0_162\jre\lib\ext\jfxrt.jar;E:\env\jdk1.8.0_162\jre\lib\ext\localedata.jar;E:\env\jdk1.8.0_162\jre\lib\ext\nashorn.jar;E:\env\jdk1.8.0_162\jre\lib\ext\sunec.jar;E:\env\jdk1.8.0_162\jre\lib\ext\sunjce_provider.jar;E:\env\jdk1.8.0_162\jre\lib\ext\sunmscapi.jar;E:\env\jdk1.8.0_162\jre\lib\ext\sunpkcs11.jar;E:\env\jdk1.8.0_162\jre\lib\ext\zipfs.jar;E:\env\jdk1.8.0_162\jre\lib\javaws.jar;E:\env\jdk1.8.0_162\jre\lib\jce.jar;E:\env\jdk1.8.0_162\jre\lib\jfr.jar;E:\env\jdk1.8.0_162\jre\lib\jfxswt.jar;E:\env\jdk1.8.0_162\jre\lib\jsse.jar;E:\env\jdk1.8.0_162\jre\lib\management-agent.jar;E:\env\jdk1.8.0_162\jre\lib\plugin.jar;E:\env\jdk1.8.0_162\jre\lib\resources.jar;E:\env\jdk1.8.0_162\jre\lib\rt.jar;E:\Projects\IdeaProjects\java_mode\out\production\DesignPattern com.atguigu.principle.singleton.type06.SingletonTest06
-        //com.atguigu.principle.singleton.type06.Singleton@1540e19d
+        System.out.println(ins.hashCode());
+        System.out.println(ins2);
+        System.out.println(ins2.hashCode());
+        System.out.println(ins == ins2);
+        Singleton ins4 = Singleton.getInstance();
+        System.out.println(ins4);
+        // gu.principle.singleton.type06.SingletonTest06
+        // com.atguigu.principle.singleton.type06.Singleton@1540e19d
+        // 356573597
+        // com.atguigu.principle.singleton.type06.Singleton@1540e19d
+        // 356573597
+        // true
+        // com.atguigu.principle.singleton.type06.Singleton@1540e19d
     }
 }
 
@@ -29,6 +42,8 @@ class Singleton{
             synchronized(Singleton.class){
                 instance = new Singleton();
             }
+            // 同步代码,效率是比较低的
+            // 只是在判断外就走过了
         }
         return instance;
     }
