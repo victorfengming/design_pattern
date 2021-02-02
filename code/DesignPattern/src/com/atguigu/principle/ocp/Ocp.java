@@ -24,6 +24,7 @@ public class Ocp {
         ge.drawShape(new Rectangle());
         ge.drawShape(new Circle());
         ge.drawShape(new Triangle());
+        ge.drawShape(new Other());
 
     }
 }
@@ -82,5 +83,14 @@ class Triangle extends Shape {
 }
 
 
-// 他这种就违背了ocp原则,然后修改的代码还挺多的
+// 新增其他图形
+class Other extends Shape{
+
+    @Override
+    public void draw() {
+        System.out.println("其他图形");
+    }
+}
+
+
 
