@@ -66,25 +66,45 @@ class CollegeManager {
         // 模拟10个员工的数据
         for (int i = 0; i < 10; i++) {
             CollegeEmployee emp = new CollegeEmployee();
-            emp.setId("学院员工id="+i);
+            emp.setId("学院员工id=" + i);
             list.add(emp);
         }
         return list;
+    }
+
+    public void getAllEmployee2(CollegeManager sub) {
+ /*
+         * 分析问题:
+         * 1. 将输出学院的员工的方法,封装到CollegeManager
+         *
+         * */
+// 获取到学院员工
+        List<CollegeEmployee> list1 = sub.getAllEmployee();
+        System.out.println("----------------分公司员工----------------");
+        for (CollegeEmployee e : list1) {
+            System.out.println(e.getId());
+        }
+        List<Employee> list2 = new SchoolManager().getAllEmployee();
+        System.out.println("----------学校总部员工---------------");
+        for (Employee employee : list2) {
+            System.out.println(employee.getId());
+        }
+
     }
 }
 
 // 学校管理类
 /*
-* 这里分析一波,他的直接朋友是哪些,他的间接朋友又是哪些?
-* */
-class SchoolManager{
+ * 这里分析一波,他的直接朋友是哪些,他的间接朋友又是哪些?
+ * */
+class SchoolManager {
 
     // 返回学校总部的员工
     public List<Employee> getAllEmployee() {
         List<Employee> list = new ArrayList<Employee>();
         for (int i = 0; i < 5; i++) {
             Employee emp = new Employee();
-            emp.setId("学校总部员工id="+i);
+            emp.setId("学校总部员工id=" + i);
             list.add(emp);
         }
         return list;
@@ -92,25 +112,6 @@ class SchoolManager{
 
     // 改方法完成输出学校总部和学院员工信息的方法
     void printAllEmployee(CollegeManager sub) {
-
-        /*
-        * 分析问题:
-        * 1. 这里的CollegeEmployee 不是SchoolManager 的直接朋友
-        * 2. CollegeEmployee 是以局部变量方式出现在SchoolManager
-        * 3. 违反了迪米特法则
-        *
-        * */
-
-        // 获取到学院员工
-        List<CollegeEmployee> list1 = sub.getAllEmployee();
-        System.out.println("----------------分公司员工----------------");
-        for (CollegeEmployee e : list1) {
-            System.out.println(e.getId());
-        }
-        List<Employee> list2 = this.getAllEmployee();
-        System.out.println("----------学校总部员工---------------");
-        for (Employee employee : list2) {
-            System.out.println(employee.getId());
-        }
+        sub.getAllEmployee2(sub);
     }
 }
