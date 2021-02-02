@@ -25,6 +25,9 @@ public class Ocp {
         ge.drawShape(new Circle());
         ge.drawShape(new Triangle());
         ge.drawShape(new Other());
+        // ?
+        // todo 这里怎么说就
+        // 调用方还是加上了一行代码啊
 
     }
 }
@@ -33,7 +36,7 @@ public class Ocp {
  * 这是一个用于绘图的类
  * */
 class GraphicEditor {
-    // 接收shape对象,然后根据type,来绘制不同的图形
+    // 这个才是真正的调用方
     public void drawShape(Shape s) {
        s.draw();
     }
