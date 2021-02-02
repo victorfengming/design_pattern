@@ -2,7 +2,7 @@
 
 #### Description
 java 设计模式
-
+https://www.bilibili.com/video/BV1G4411c7N4?p=34
 #### Software Architecture
 Software architecture description
 
