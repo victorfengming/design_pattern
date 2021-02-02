@@ -34,42 +34,28 @@ public class Ocp {
 class GraphicEditor {
     // 接收shape对象,然后根据type,来绘制不同的图形
     public void drawShape(Shape s) {
-        if (s.m_type == 1) {
-            drawRectangle(s);
-        } else if (s.m_type == 2) {
-            drawCircle(s);
-        }else if (s.m_type == 3) {
-            drawTriangle(s);
-        }
-
-    }
-
-    // 沪指矩形
-    public void drawRectangle(Shape r) {
-        System.out.println("矩形");
-    }
-
-    // 绘制原型
-    public void drawCircle(Shape r) {
-        System.out.println("原形");
-    }
-
-    // 沪指三角形
-    public void drawTriangle(Shape r) {
-        System.out.println("绘制三角形");
+       s.draw();
     }
 }
 
 /*
  * 鸡肋
  * */
-class Shape {
+abstract class Shape {
     int m_type;
+
+    public abstract void draw();// 抽象方法
 }
 
 class Rectangle extends Shape {
     Rectangle() {
         super.m_type = 1;
+    }
+
+    @Override
+    public void draw() {
+        // sout`
+        System.out.println("绘制矩形!");
     }
 }
 
@@ -77,10 +63,24 @@ class Circle extends Shape {
     Circle() {
         super.m_type = 2;
     }
+
+    @Override
+    public void draw() {
+        System.out.println("绘制原型");
+    }
 }
 
 class Triangle extends Shape {
     Triangle() {
         super.m_type = 3;
     }
+
+    @Override
+    public void draw() {
+        System.out.println("绘制三角");
+    }
 }
+
+
+// 他这种就违背了ocp原则,然后修改的代码还挺多的
+
