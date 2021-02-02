@@ -7,11 +7,18 @@
 
 3. 使用UML来建模,常用的工具由于Rational Rose,也可以使用一些插件来建模
 
+---
 
+idea 实现的类图
+ 
+ ![](../img/QQ截图20210202131251.png)
+ 
+ eclipse 中的 插件 
+ 
+ ![](../img/QQ截图20210202132256.png)
  
  
- 
- 
+ [一个插件教程](https://plantuml.com/zh/class-diagram)
  
  
  
