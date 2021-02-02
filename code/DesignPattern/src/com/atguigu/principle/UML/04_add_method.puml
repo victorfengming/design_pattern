@@ -1,0 +1,27 @@
+'https://plantuml.com/zh/class-diagram
+
+@startuml
+'为了声明字段(对象属性）或者方法，你可以使用 后接字段名或方法名。
+ '系统检查是否有括号来判断是方法还是字段。
+Object <|-- ArrayList
+
+Object : equals()
+ArrayList : Object[] elementData
+ArrayList : size()
+'也可以使用{} 把字段或者方法括起来
+ '注意，这种语法对于类型/名字的顺序是非常灵活的。
+class Dummy {
+  String data
+  void methods()
+}
+
+class Flight {
+   flightNumber : Integer
+   departureTime : Date
+}
+'你可以（显式地）使用 {field} 和 {method} 修饰符来覆盖解析器的对于字段和方法的默认行为
+class Dummy {
+  {field} A field (despite parentheses)
+  {method} Some method
+}
+@enduml
