@@ -11,6 +11,7 @@ import java.util.List;
  *
  * @author yufengming
  * @version 产品版本信息 2021年02月02日9:51分 yufengming(yufengming@travelsky.com) 新建<br/>
+ * 辽A 61h7f
  * <p>
  * 修改记录
  * @email yufengming@travelsky.com
@@ -20,6 +21,8 @@ import java.util.List;
 public class demeter1 {
 
     public static void main(String[] args) {
+
+        System.out.println("使用迪米特法则的改进!");
         /// 创建一个学校管理类 SchoolManager 对象
         SchoolManager schoolManager = new SchoolManager();
         // 输出学院的员工id 和 学校总部的员工信息
@@ -71,24 +74,20 @@ class CollegeManager {
         }
         return list;
     }
-
-    public void getAllEmployee2(CollegeManager sub) {
+    // 输出学院员工的信息
+    public void printEmployee() {
  /*
          * 分析问题:
          * 1. 将输出学院的员工的方法,封装到CollegeManager
          *
          * */
-// 获取到学院员工
-        List<CollegeEmployee> list1 = sub.getAllEmployee();
+        // 获取到学院员工
+        List<CollegeEmployee> list1 = getAllEmployee();
         System.out.println("----------------分公司员工----------------");
         for (CollegeEmployee e : list1) {
             System.out.println(e.getId());
         }
-        List<Employee> list2 = new SchoolManager().getAllEmployee();
-        System.out.println("----------学校总部员工---------------");
-        for (Employee employee : list2) {
-            System.out.println(employee.getId());
-        }
+
 
     }
 }
@@ -112,6 +111,12 @@ class SchoolManager {
 
     // 改方法完成输出学校总部和学院员工信息的方法
     void printAllEmployee(CollegeManager sub) {
-        sub.getAllEmployee2(sub);
+        sub.printEmployee();
+        // ---
+        List<Employee> list2 = new SchoolManager().getAllEmployee();
+        System.out.println("----------学校总部员工---------------");
+        for (Employee employee : list2) {
+            System.out.println(employee.getId());
+        }
     }
 }
