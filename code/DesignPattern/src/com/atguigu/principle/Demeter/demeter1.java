@@ -92,6 +92,15 @@ class SchoolManager{
 
     // 改方法完成输出学校总部和学院员工信息的方法
     void printAllEmployee(CollegeManager sub) {
+
+        /*
+        * 分析问题:
+        * 1. 这里的CollegeEmployee 不是SchoolManager 的直接朋友
+        * 2. CollegeEmployee 是以局部变量方式出现在SchoolManager
+        * 3. 违反了迪米特法则
+        *
+        * */
+
         // 获取到学院员工
         List<CollegeEmployee> list1 = sub.getAllEmployee();
         System.out.println("----------------分公司员工----------------");
