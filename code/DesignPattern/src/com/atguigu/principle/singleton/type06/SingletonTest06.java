@@ -32,14 +32,17 @@ public class SingletonTest06 {
 }
 
 
-class Singleton{
+class Singleton {
     private static volatile Singleton instance;
-    private Singleton(){}
+
+    private Singleton() {
+    }
+
     // 提供一个静态的公有方法,加入双重检查代码
     // ,解决线程安全问题,同时解决懒加载问题
-    public static Singleton getInstance(){
+    public static Singleton getInstance() {
         if (instance == null) {
-            synchronized(Singleton.class){
+            synchronized (Singleton.class) {
                 instance = new Singleton();
             }
             // 同步代码,效率是比较低的
