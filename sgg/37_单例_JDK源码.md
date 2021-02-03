@@ -3,7 +3,7 @@
 
 ### 单例模式在jdk中的源码分析
 
-1. 在我们JDK中,java.lang.Runtime就是经典的单例模式
+1. 在我们JDK中,java.lang.Runtime就是经典的单例模式(恶汉式)
 
 2. 代码分析+Debug源码+代码说明
 
