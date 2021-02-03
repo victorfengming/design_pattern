@@ -21,12 +21,12 @@ public class PizzaStore {
         System.out.println();
         new OrderPizza();
         /*
-        * input pizza type:
-        greek
-        nullbaking;
-        nullcutting;
-        nullboxting;
         input pizza type:
+        greek
+        给希腊披萨准备原材料
+        希腊披萨!baking;
+        希腊披萨!cutting;
+        希腊披萨!boxting;
         * */
     }
 }
