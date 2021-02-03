@@ -27,7 +27,6 @@ public class SingletonTest06 {
         // com.atguigu.principle.singleton.type06.Singleton@1540e19d
         // 356573597
         // true
-        // com.atguigu.principle.singleton.type06.Singleton@1540e19d
     }
 }
 
