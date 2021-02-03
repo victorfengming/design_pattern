@@ -30,7 +30,6 @@ public class SingletonTest07 {
         356573597
         true
         com.atguigu.principle.singleton.type07.Singleton@1540e19d
-
         * */
     }
 }
