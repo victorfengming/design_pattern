@@ -1,7 +1,5 @@
 package com.atguigu.factory.simplefactory.pizzastore.order;
 
-import com.atguigu.factory.simplefactory.pizzastore.pizza.CheesePizza;
-import com.atguigu.factory.simplefactory.pizzastore.pizza.GreekPizza;
 import com.atguigu.factory.simplefactory.pizzastore.pizza.Pizza;
 
 import java.io.BufferedReader;
@@ -24,22 +22,34 @@ import java.io.InputStreamReader;
  */
 public class OrderPizza {
 
+    // 定义一个简单工厂对象
+    SimpleFactory simpleFactory;
+    Pizza pizza = null;
+
     // 构造器
-    public OrderPizza() {
-        Pizza pizza = null;
-        String orderType; // 订购披萨类型
+    public OrderPizza(SimpleFactory simpleFactory) {
+        setFactory(simpleFactory);
+    }
 
-        // 定义一个简单工厂对象
-        SimpleFactory sf = new SimpleFactory();
+    public void setFactory(SimpleFactory simpleFactory) {
+        String orderType = ""; //用户输入的
+
+        this.simpleFactory = simpleFactory;// 设置简单工厂对象
+        //
         do {
-            Pizza p = sf.createPizza(getType());
-
-            // 输出pizza 制作过程
-            p.prepare();
-            p.bake();
-            p.cut();
-            p.box();
-
+            orderType = getType();
+            //
+            pizza = this.simpleFactory.createPizza(orderType);
+            // 输出pizza
+            if (pizza != null) {
+                pizza.prepare();
+                pizza.bake();
+                pizza.cut();
+                pizza.box();
+            } else {
+                System.out.println("么有这个披萨,订购失败");
+                break;
+            }
         } while (true);
     }
 

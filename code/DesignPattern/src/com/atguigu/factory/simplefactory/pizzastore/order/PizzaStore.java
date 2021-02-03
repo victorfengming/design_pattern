@@ -19,15 +19,15 @@ import com.atguigu.factory.simplefactory.pizzastore.pizza.Pizza;
 public class PizzaStore {
     public static void main(String[] args) {
         System.out.println();
-        new OrderPizza();
+        new OrderPizza(new SimpleFactory());
         /*
         input pizza type:
-        pepper
+        cheese
         使用简单工厂模式
         给奶酪披萨准备原材料!
-        胡椒披萨!baking;
-        胡椒披萨!cutting;
-        胡椒披萨!boxting;
+        奶酪披萨!baking;
+        奶酪披萨!cutting;
+        奶酪披萨!boxting;
         * */
     }
 }
