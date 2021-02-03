@@ -1,0 +1,603 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>单例_小结 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="39_工厂模式_简单工厂模式.html" />
+    
+    
+    <link rel="prev" href="37_单例_JDK源码.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01_设计抹水泥面试题.html">
+            
+                <a href="01_设计抹水泥面试题.html">
+            
+                    
+                    设计抹水泥面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="03_何时会用到设计模式.html">
+            
+                <a href="03_何时会用到设计模式.html">
+            
+                    
+                    何时会用到设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="04_授课方式.html">
+            
+                <a href="04_授课方式.html">
+            
+                    
+                    授课方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="05_七大原则.html">
+            
+                <a href="05_七大原则.html">
+            
+                    
+                    七大原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="06_单一职责原则.html">
+            
+                <a href="06_单一职责原则.html">
+            
+                    
+                    单一职责原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="08_接口隔离原则.html">
+            
+                <a href="08_接口隔离原则.html">
+            
+                    
+                    接口隔离原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="11_依赖倒转原则.html">
+            
+                <a href="11_依赖倒转原则.html">
+            
+                    
+                    依赖倒转原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="14_里氏替换原则.html">
+            
+                <a href="14_里氏替换原则.html">
+            
+                    
+                    里氏替换原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="16_开闭原则.html">
+            
+                <a href="16_开闭原则.html">
+            
+                    
+                    开闭原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="19_迪米特法则.html">
+            
+                <a href="19_迪米特法则.html">
+            
+                    
+                    迪米特法则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="22_合成复用原则.html">
+            
+                <a href="22_合成复用原则.html">
+            
+                    
+                    合成复用原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="23_UML相关.html">
+            
+                <a href="23_UML相关.html">
+            
+                    
+                    UML相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="25_类的依赖泛化.html">
+            
+                <a href="25_类的依赖泛化.html">
+            
+                    
+                    类的依赖泛化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="26_类的依赖泛化.html">
+            
+                <a href="26_类的依赖泛化.html">
+            
+                    
+                    类的依赖泛化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="29_单例_饿汉_静态常量.html">
+            
+                <a href="29_单例_饿汉_静态常量.html">
+            
+                    
+                    单例饿汉静态常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="30_单例_饿汉_静态代码块儿.html">
+            
+                <a href="30_单例_饿汉_静态代码块儿.html">
+            
+                    
+                    单例饿汉静态代码块儿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="31_单例_线程不安全_懒汉式.html">
+            
+                <a href="31_单例_线程不安全_懒汉式.html">
+            
+                    
+                    单例线程不安全懒汉式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="31_工厂模式_简单工厂模式.html">
+            
+                <a href="31_工厂模式_简单工厂模式.html">
+            
+                    
+                    工厂模式_简单工厂模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="32_单例_线程安全_懒汉式.html">
+            
+                <a href="32_单例_线程安全_懒汉式.html">
+            
+                    
+                    单例线程安全懒汉式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="33_单例_同步代码块_懒汉式.html">
+            
+                <a href="33_单例_同步代码块_懒汉式.html">
+            
+                    
+                    单例同步代码块懒汉式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="34_单例_双重检查.html">
+            
+                <a href="34_单例_双重检查.html">
+            
+                    
+                    单例_双重检查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="35_单例_静态内部类.html">
+            
+                <a href="35_单例_静态内部类.html">
+            
+                    
+                    单例_静态内部类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="36_单例_枚举.html">
+            
+                <a href="36_单例_枚举.html">
+            
+                    
+                    单例_枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="37_单例_JDK源码.html">
+            
+                <a href="37_单例_JDK源码.html">
+            
+                    
+                    单例_JDK源码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.26" data-path="38_单例_小结.html">
+            
+                <a href="38_单例_小结.html">
+            
+                    
+                    单例_小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="39_工厂模式_简单工厂模式.html">
+            
+                <a href="39_工厂模式_简单工厂模式.html">
+            
+                    
+                    工厂模式_简单工厂模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="43_工厂模式_工厂方法模式.html">
+            
+                <a href="43_工厂模式_工厂方法模式.html">
+            
+                    
+                    工厂模式_工厂方法模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >单例_小结</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5355;&#x4F8B;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;">&#x5355;&#x4F8B;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</h1>
+<p>&#x6240;&#x8C13;&#x5355;&#x4F8B;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;,&#x5373;&#x65F6;&#x91C7;&#x53D6;&#x4E00;&#x5B9A;&#x7684;&#x65B9;&#x6CD5;&#x4FDD;&#x8BC1;&#x5728;&#x6574;&#x4E2A;&#x8F6F;&#x4EF6;&#x7CFB;&#x7EDF;&#x5F53;&#x4E2D;,&#x5BF9;&#x4E8E;&#x67D0;&#x4E2A;&#x7C7B;&#x53EA;&#x80FD;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;,&#x5E76;&#x4E14;&#x8BE5;&#x7C7B;&#x53EA;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5176;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x7684;&#x65B9;&#x6CD5;(&#x9759;&#x6001;&#x65B9;&#x6CD5;)</p>
+<p>&#x6BD4;&#x5982;Hibernate&#x7684;SessionFactory.</p>
+<h3 id="&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#x548C;&#x7EC6;&#x8282;&#x8BF4;&#x660E;">&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#x548C;&#x7EC6;&#x8282;&#x8BF4;&#x660E;</h3>
+<ol>
+<li><p>&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x4FDD;&#x8BC1;&#x4E86;&#x7CFB;&#x7EDF;&#x5185;&#x5B58;&#x4E2D;&#x8BE5;&#x7C7B;&#x53EA;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;,&#x8282;&#x7701;&#x4E86;&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;,&#x5BF9;&#x4E8E;&#x4E00;&#x4E9B;&#x8981;&#x9891;&#x7E41;&#x521B;&#x5EFA;&#x9500;&#x6BC1;&#x7684;&#x5BF9;&#x8C61;,&#x4F7F;&#x7528;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x53EF;&#x4EE5;&#x63D0;&#x9AD8;&#x7CFB;&#x7EDF;&#x6027;&#x80FD;</p>
+</li>
+<li><p>&#x5F53;&#x60F3;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A;&#x5355;&#x4F8B;&#x7C7B;&#x7684;&#x65F6;&#x5019;,&#x5FC5;&#x987B;&#x8981;&#x8BB0;&#x4F4F;&#x4F7F;&#x7528;&#x76F8;&#x5E94;&#x7684;&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;,&#x800C;&#x4E0D;&#x662F;&#x4F7F;&#x7528;new</p>
+</li>
+<li><p>&#x5355;&#x4F8B;&#x6A21;&#x5F0F; <em>&#x4F7F;&#x7528;&#x7684;&#x573A;&#x666F;</em> : &#x9700;&#x8981; <em>&#x9891;&#x7E41;&#x7684;&#x8FDB;&#x884C;&#x521B;&#x5EFA;</em> &#x548C; <em>&#x9500;&#x6BC1;&#x7684;&#x5BF9;&#x8C61;</em>,&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x65F6;&#x8017;&#x65F6;&#x8FC7;&#x591A;&#x800C;&#x8017;&#x8D39;&#x8D44;&#x6E90;&#x8FC7;&#x591A;(&#x5373;:  <strong>&#x91CD;&#x91CF;&#x7EA7;&#x5BF9;&#x8C61;</strong> ),&#x4F46;&#x53C8;&#x7ECF;&#x5E38;&#x7528;&#x5230;&#x7684;&#x5BF9;&#x8C61;, <strong>&#x5DE5;&#x5177;&#x7C7B;&#x5BF9;&#x8C61;</strong> ,&#x9891;&#x7E41;&#x8BBF;&#x95EE;&#x6570;&#x636E;&#x5E93;&#x6216;&#x6587;&#x4EF6;&#x7684;&#x5BF9;&#x8C61;(&#x6BD4;&#x5982; <strong>&#x6570;&#x636E;&#x6E90;,session&#x5DE5;&#x5382;</strong> &#x7B49;)</p>
+</li>
+</ol>
+<h3 id="&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x6709;8&#x79CD;&#x65B9;&#x5F0F;">&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x6709;8&#x79CD;&#x65B9;&#x5F0F;:</h3>
+<ul>
+<li>&#x997F;&#x6C49;_&#x9759;&#x6001;&#x5E38;&#x91CF;</li>
+<li>&#x997F;&#x6C49;_&#x9759;&#x6001;&#x4EE3;&#x7801;&#x5757;&#x513F;</li>
+<li><strong>&#x7EBF;&#x7A0B;&#x4E0D;&#x5B89;&#x5168;_&#x61D2;&#x6C49;&#x5F0F;</strong></li>
+<li><strong>&#x7EBF;&#x7A0B;&#x5B89;&#x5168;_&#x61D2;&#x6C49;&#x5F0F;</strong></li>
+<li><strong>&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x5757;_&#x61D2;&#x6C49;&#x5F0F;</strong></li>
+<li>&#x53CC;&#x91CD;&#x68C0;&#x67E5;</li>
+<li>&#x9759;&#x6001;&#x5185;&#x90E8;&#x7C7B;</li>
+<li>&#x679A;&#x4E3E;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="37_单例_JDK源码.html" class="navigation navigation-prev " aria-label="Previous page: 单例_JDK源码">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="39_工厂模式_简单工厂模式.html" class="navigation navigation-next " aria-label="Next page: 工厂模式_简单工厂模式">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"单例_小结","level":"1.26","depth":1,"next":{"title":"工厂模式_简单工厂模式","level":"1.27","depth":1,"path":"39_工厂模式_简单工厂模式.md","ref":"39_工厂模式_简单工厂模式.md","articles":[]},"previous":{"title":"单例_JDK源码","level":"1.25","depth":1,"path":"37_单例_JDK源码.md","ref":"37_单例_JDK源码.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"38_单例_小结.md","mtime":"2021-02-03T01:55:11.226Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-03T07:47:04.907Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
