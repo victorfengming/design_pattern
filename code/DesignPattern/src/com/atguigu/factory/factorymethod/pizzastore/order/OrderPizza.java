@@ -12,11 +12,11 @@ import java.io.InputStreamReader;
  * Date: 2021-02-03 15:21 <br/>
  * <br/>
  *
- * @author yufengming
- * @version 产品版本信息 2021年02月03日15:21分 yufengming(yufengming@travelsky.com) 新建<br/>
+ * @author victor
+ * @version 产品版本信息 2021年02月03日15:21分 victor(victorfm@163.com) 新建<br/>
  * <p>
  * 修改记录
- * @email yufengming@travelsky.com
+ * @email victorfm@163.com
  * @project java_mode
  * @package com.atguigu.factory.factorymethod.pizzastore.order
  */

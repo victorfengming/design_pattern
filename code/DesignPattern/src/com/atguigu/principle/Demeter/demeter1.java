@@ -9,12 +9,12 @@ import java.util.List;
  * Date: 2021-02-02 9:51 <br/>
  * <br/>
  *
- * @author yufengming
- * @version 产品版本信息 2021年02月02日9:51分 yufengming(yufengming@travelsky.com) 新建<br/>
+ * @author victor
+ * @version 产品版本信息 2021年02月02日9:51分 victor(victorfm@163.com) 新建<br/>
  * 辽A 61h7f
  * <p>
  * 修改记录
- * @email yufengming@travelsky.com
+ * @email victorfm@163.com
  * @project java_mode
  * @package com.atguigu.principle.Demeter
  */
