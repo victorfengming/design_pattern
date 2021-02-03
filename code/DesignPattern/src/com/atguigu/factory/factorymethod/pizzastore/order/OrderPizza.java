@@ -1,6 +1,7 @@
 package com.atguigu.factory.factorymethod.pizzastore.order;
 
 
+import com.atguigu.factory.factorymethod.pizzastore.pizza.Pizza;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,7 +21,31 @@ import java.io.InputStreamReader;
  * @project java_mode
  * @package com.atguigu.factory.factorymethod.pizzastore.order
  */
-public class OrderPizza {
+public abstract class OrderPizza {
+
+    // 定义一个抽象方法,createPizza,让各个工行子类自己实现
+    abstract Pizza createPizza(String orderType);
+
+    // 构造器
+    public OrderPizza() {
+        Pizza pizza = null;
+        String orderType;   // 订购披萨类型
+        do {
+            orderType = getType();
+            //我么在这里直接调用createPizza这个方法
+            pizza = createPizza(orderType);
+            // 这个createPizza 是由他的工厂子类去实现
+            // 但是这个创建的方法在本类 他是一个抽象的方法
+            //
+            // 执行这个披萨的制作过程
+            pizza.prepare();
+            pizza.bake();
+            pizza.cut();
+            pizza.box();
+
+        } while (true);
+
+    }
 
     // 写一个方法,可以获取客户希望订购的披萨种类
     private String getType() {
