@@ -22,11 +22,12 @@ public class PizzaStore {
         new OrderPizza();
         /*
         input pizza type:
-        greek
-        给希腊披萨准备原材料
-        希腊披萨!baking;
-        希腊披萨!cutting;
-        希腊披萨!boxting;
+        pepper
+        使用简单工厂模式
+        给奶酪披萨准备原材料!
+        胡椒披萨!baking;
+        胡椒披萨!cutting;
+        胡椒披萨!boxting;
         * */
     }
 }

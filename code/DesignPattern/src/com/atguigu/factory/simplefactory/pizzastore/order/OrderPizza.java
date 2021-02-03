@@ -29,25 +29,16 @@ public class OrderPizza {
         Pizza pizza = null;
         String orderType; // 订购披萨类型
 
+        // 定义一个简单工厂对象
+        SimpleFactory sf = new SimpleFactory();
         do {
-            orderType = getType();
-            if (orderType.equals("greek")) {
-                pizza = new GreekPizza();
-                pizza.setName("希腊披萨!");
-            } else if (orderType.equals("cheese")) {
-                pizza = new CheesePizza();
-                pizza.setName("奶酪披萨!");
-            }else if (orderType.equals("pepper")) {
-                pizza = new CheesePizza();
-                pizza.setName("胡椒披萨!");
-            } else {
-                break;
-            }
+            Pizza p = sf.createPizza(getType());
+
             // 输出pizza 制作过程
-            pizza.prepare();
-            pizza.bake();
-            pizza.cut();
-            pizza.box();
+            p.prepare();
+            p.bake();
+            p.cut();
+            p.box();
 
         } while (true);
     }
