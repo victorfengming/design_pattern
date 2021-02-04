@@ -4,12 +4,8 @@ public class Clinet {
     public static void main(String[] args) {
         // 原型模式完成 对象的创建
         Sheep sheep = new Sheep("tom", 1, "白色");
-
         sheep.friend =  new Sheep("jack", 3, "黑色");
-
-
         Sheep sheep2 = (Sheep)sheep.clone();    // 克隆
-
         System.out.println("sheep="+sheep);
         System.out.println("sheep.friend="+sheep.friend.hashCode());
         System.out.println("sheep2="+sheep2);
