@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>单例线程不安全懒汉式 · GitBook</title>
+        <title>建造者模式_盖房子 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="32_单例_线程安全_懒汉式.html" />
+    <link rel="next" href="56_建造者模式_原理类图.html" />
     
-    
-    <link rel="prev" href="30_单例_饿汉_静态代码块儿.html" />
     
 
     </head>
@@ -355,7 +353,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.3" data-path="31_单例_线程不安全_懒汉式.html">
+        <li class="chapter " data-level="1.5.3" data-path="31_单例_线程不安全_懒汉式.html">
             
                 <a href="31_单例_线程不安全_懒汉式.html">
             
@@ -607,7 +605,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1" data-path="55_建造者模式_盖房子.html">
+        <li class="chapter active" data-level="1.8.1" data-path="55_建造者模式_盖房子.html">
             
                 <a href="55_建造者模式_盖房子.html">
             
@@ -668,7 +666,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >单例线程不安全懒汉式</a>
+        <a href="." >建造者模式_盖房子</a>
     </h1>
 </div>
 
@@ -683,53 +681,96 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x61D2;&#x6C49;&#x5F0F;&#x7EBF;&#x7A0B;&#x4E0D;&#x5B89;&#x5168;">&#x61D2;&#x6C49;&#x5F0F;(&#x7EBF;&#x7A0B;&#x4E0D;&#x5B89;&#x5168;)</h1>
-<h3 id="&#x4F18;&#x7F3A;&#x70B9;&#x8BF4;&#x660E;">&#x4F18;&#x7F3A;&#x70B9;&#x8BF4;&#x660E;</h3>
+                                <h1 id="&#x5EFA;&#x9020;&#x8005;&#x6A21;&#x5F0F;">&#x5EFA;&#x9020;&#x8005;&#x6A21;&#x5F0F;</h1>
+<h3 id="&#x76D6;&#x623F;&#x5B50;&#x9879;&#x76EE;&#x9700;&#x6C42;">&#x76D6;&#x623F;&#x5B50;&#x9879;&#x76EE;&#x9700;&#x6C42;</h3>
 <ol>
-<li><p>&#x8D77;&#x5230;&#x4E86;Lazy Loading&#x7684;&#x6548;&#x679C;,&#x4F46;&#x662F;&#x53EA;&#x80FD;&#x5728;&#x5355;&#x7EBF;&#x7A0B;&#x4E0B;&#x4F7F;&#x7528;</p>
+<li><p>&#x9700;&#x8981;&#x5EFA;&#x623F;&#x5B50;: &#x8FD9;&#x4E00;&#x4E2A;&#x8FC7;&#x7A0B;&#x4E3A;&#x6253;&#x6869;,&#x780C;&#x5899;,&#x5C01;&#x9876;</p>
 </li>
-<li><p>&#x5982;&#x679C;&#x5728;&#x591A;&#x7EBF;&#x7A0B;&#x4E0B;, &#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x8FDB;&#x5165;if(singleton == null)&#x5224;&#x65AD; &#x8BED;&#x53E5;&#x5757;,&#x8FD8;&#x672A;&#x6765;&#x5F97;&#x53CA;&#x5F80;&#x4E0B;&#x6267;&#x884C;,&#x53E6;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E5F;&#x901A;&#x8FC7;&#x4E86;&#x8FD9;&#x4E2A;&#x5224;&#x65AD;&#x8BED;&#x53E5;,&#x8FD9;&#x65F6;&#x4FBF;&#x4F1A;&#x4EA7;&#x751F;&#x591A;&#x4E2A;&#x5B9E;&#x4F8B;.</p>
-<p>&#x6240;&#x4EE5;&#x5728;&#x591A;&#x7EBF;&#x7A0B;&#x7684;&#x73AF;&#x5883;&#x4E0B;,&#x4E0D;&#x53EF;&#x4F7F;&#x7528;&#x79CD;&#x65B9;&#x5F0F;</p>
+<li><p>&#x623F;&#x5B50;&#x6709;&#x5404;&#x79CD;&#x5404;&#x6837;&#x7684;,&#x6BD4;&#x5982;&#x666E;&#x901A;&#x623F;,&#x9AD8;&#x697C;,&#x522B;&#x5885;,&#x5404;&#x79CD;&#x623F;&#x5B50;&#x7684;&#x8FC7;&#x7A0B;&#x867D;&#x7136;&#x4E00;&#x6837;,&#x4F46;&#x662F;&#x8981;&#x6C42;&#x4E0D;&#x8981;&#x76F8;&#x540C;&#x7684;</p>
 </li>
-<li><p>&#x7ED3;&#x8BBA;:&#x5728;&#x5B9E;&#x4F8B;&#x5F00;&#x53D1;&#x4E2D;,&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;(&#x56E0;&#x4E3A;&#x4ED6;&#x6709;&#x6F5C;&#x5728;&#x7684;&#x5371;&#x9669;,&#x5C31;&#x4E0D;&#x80FD;&#x7528;,&#x4ED6;&#x5C31;&#x6709;&#x9519;&#x8BEF;&#x4E86;,&#x4E0D;&#x53EF;&#x7528;,&#x4E0D;&#x53EF;&#x7528;,&#x4E0D;&#x53EF;&#x7528;!)</p>
-<h3 id="&#x4EE3;&#x7801;&#x6F14;&#x793A;">&#x4EE3;&#x7801;&#x6F14;&#x793A;</h3>
-<p>```java
-package com.atguigu.principle.singleton.type03;</p>
+<li><p>&#x7F16;&#x5199;&#x7A0B;&#x5E8F;&#x5B8C;&#x6210;&#x9700;&#x6C42;</p>
 </li>
 </ol>
-<p>/**</p>
-<ul>
-<li>@author victor</li>
-<li>@site <a href="https://victorfengming.github.io/" target="_blank">https://victorfengming.github.io/</a></li>
-<li>@company XDL</li>
-<li>@project java_mode</li>
-<li>@package com.atguigu.principle.singleton.type03</li>
-<li>@created 2021-02-02 19:13</li>
-<li><p>@function &quot;&quot;
-*/
-public class SingletonTest03 {
- public static void main(String[] args) {</p>
-<p> }
-}</p>
-</li>
-</ul>
-<p>class Singleton{
-    private static Singleton instance;</p>
-<pre><code>private Singleton() {
+<hr>
+<h3 id="&#x601D;&#x8DEF;&#x56FE;">&#x601D;&#x8DEF;&#x56FE;</h3>
+<p> <img src="img/QQ&#x622A;&#x56FE;20210204154734.png" alt=""></p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.builder;
 
-}
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AbstractHouse</span> </span>{
+    <span class="hljs-comment">// &#x6253;&#x5730;&#x57FA;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">buildBasic</span><span class="hljs-params">()</span></span>;
 
-// &#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x7684;&#x516C;&#x6709;&#x65B9;&#x6CD5;,&#x5F53;&#x4F7F;&#x7528;&#x5230;&#x8BE5;&#x65B9;&#x6CD5;&#x65F6;,&#x624D;&#x53BB;&#x521B;&#x5EFA;instance
-// &#x5373;&#x61D2;&#x6C49;&#x5F0F;
+    <span class="hljs-comment">// &#x780C;&#x5899;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">buildWalls</span><span class="hljs-params">()</span></span>;
 
-public static Singleton getInstance() {
-    if (instance == null) {
-        instance = new Singleton();
+    <span class="hljs-comment">// &#x5C01;&#x9876;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">roofed</span><span class="hljs-params">()</span></span>;
+
+    <span class="hljs-comment">//&#x6211;&#x4EEC;&#x8FD9;&#x4E2A;&#x76D6;&#x623F;&#x5B50;&#x662F;&#x6709;&#x987A;&#x5E8F;&#x7684;,</span>
+    <span class="hljs-comment">// &#x6240;&#x4EE5;&#x518D;&#x5C01;&#x88C5;&#x4E00;&#x5C42;,</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">build</span><span class="hljs-params">()</span> </span>{
+        buildBasic();
+        buildWalls();
+        roofed();
     }
-    return instance;
 }
-</code></pre><p>}</p>
-<p>```</p>
+</code></pre>
+<p> <img src="img/QQ&#x622A;&#x56FE;20210204155042.png" alt=""></p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.builder;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CommonHouse</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AbstractHouse</span> </span>{
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">buildBasic</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;-----------&quot;</span>);
+
+        System.out.println(<span class="hljs-string">&quot;&#x666E;&#x901A;&#x623F;&#x5B50;&#x6253;&#x5730;&#x57FA;&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">buildWalls</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;-----------&quot;</span>);
+
+        System.out.println(<span class="hljs-string">&quot;&#x666E;&#x901A;&#x623F;&#x5B50;&#x780C;&#x5899;&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">roofed</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;-----------&quot;</span>);
+        System.out.println(<span class="hljs-string">&quot;&#x666E;&#x901A;&#x623F;&#x5B50;&#x5C01;&#x9876;&quot;</span>);
+    }
+}
+</code></pre>
+<p>&#x597D;&#x4E86;,&#x73B0;&#x5728;&#x5199;&#x4E00;&#x4E2A;&#x4E3B;&#x65B9;&#x6CD5;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.builder;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Clinet</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        CommonHouse commonHouse = <span class="hljs-keyword">new</span> CommonHouse();
+        commonHouse.build();
+        <span class="hljs-comment">/*
+        -----------
+        &#x666E;&#x901A;&#x623F;&#x5B50;&#x6253;&#x5730;&#x57FA;
+        -----------
+        &#x666E;&#x901A;&#x623F;&#x5B50;&#x780C;&#x5899;
+        -----------
+        &#x666E;&#x901A;&#x623F;&#x5B50;&#x5C01;&#x9876;
+        * */</span>
+    }
+}
+</code></pre>
+<p>&#x73B0;&#x5728;&#x623F;&#x5B50;&#x76D6;&#x597D;&#x4E86;,&#x4ED6;&#x6709;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#x4E48;?</p>
+<h3 id="&#x4F20;&#x7EDF;&#x65B9;&#x5F0F;&#x89E3;&#x51B3;&#x76D6;&#x623F;&#x5B50;&#x9700;&#x6C42;&#x95EE;&#x9898;&#x5206;&#x6790;">&#x4F20;&#x7EDF;&#x65B9;&#x5F0F;&#x89E3;&#x51B3;&#x76D6;&#x623F;&#x5B50;&#x9700;&#x6C42;&#x95EE;&#x9898;&#x5206;&#x6790;</h3>
+<ol>
+<li><p>&#x4F18;&#x70B9;&#x662F;&#x6BD4;&#x8F83;&#x597D;&#x7406;&#x89E3;,&#x7B80;&#x5355;&#x6613;&#x64CD;&#x4F5C;</p>
+</li>
+<li><p>&#x8BBE;&#x8BA1;&#x7684;&#x7A0B;&#x5E8F;&#x7ED3;&#x6784;,&#x8FC7;&#x4E8E;&#x7B80;&#x5355;,&#x6CA1;&#x6709;&#x8BBE;&#x8BA1;&#x7F13;&#x5B58;&#x5C42;&#x5BF9;&#x8C61;,&#x7A0B;&#x5E8F;&#x7684;&#x6269;&#x5C55;&#x548C;&#x7EF4;&#x62A4;&#x4E0D;&#x597D;.&#x4E5F;&#x5C31;&#x662F;&#x8BF4;,&#x8FD9;&#x79CD;&#x8BBE;&#x8BA1;&#x65B9;&#x6848;,&#x628A;&#x4EA7;&#x54C1;(&#x5373;: &#x623F;&#x5B50;)&#x548C;&#x521B;&#x5EFA;&#x4EA7;&#x54C1;&#x7684;&#x8FC7;&#x7A0B;(&#x5373;: &#x5EFA;&#x623F;&#x5B50;&#x6D41;&#x7A0B;) &#x5C01;&#x88C5;&#x5728;&#x4E86;&#x4E00;&#x8D77;,&#x8026;&#x5408;&#x6027;&#x8D28;&#x589E;&#x5F3A;&#x4E86;</p>
+</li>
+<li><p>&#x89E3;&#x51B3;&#x65B9;&#x6848;: &#x5C06;&#x4EA7;&#x54C1;&#x548C;&#x4EA7;&#x54C1;&#x7684;&#x5EFA;&#x9020;&#x8FC7;&#x7A0B;&#x89E3;&#x8026; ==&gt; &#x5EFA;&#x9020;&#x8005;&#x6A21;&#x5F0F;</p>
+</li>
+</ol>
+<hr>
+<p>&#x5E94;&#x8BE5;&#x53EB;&#x505A;&#x5305;&#x5DE5;&#x5934;&#x6A21;&#x5F0F;</p>
+<hr>
 
                                 
                                 </section>
@@ -757,12 +798,8 @@ public static Singleton getInstance() {
 
             
                 
-                <a href="30_单例_饿汉_静态代码块儿.html" class="navigation navigation-prev " aria-label="Previous page: 单例饿汉静态代码块儿">
-                    <i class="fa fa-angle-left"></i>
-                </a>
                 
-                
-                <a href="32_单例_线程安全_懒汉式.html" class="navigation navigation-next " aria-label="Next page: 单例线程安全懒汉式">
+                <a href="56_建造者模式_原理类图.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 建造者模式_原理类图">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -773,7 +810,7 @@ public static Singleton getInstance() {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"单例线程不安全懒汉式","level":"1.5.3","depth":2,"next":{"title":"单例线程安全懒汉式","level":"1.5.4","depth":2,"path":"32_单例_线程安全_懒汉式.md","ref":"32_单例_线程安全_懒汉式.md","articles":[]},"previous":{"title":"单例饿汉静态代码块儿","level":"1.5.2","depth":2,"path":"30_单例_饿汉_静态代码块儿.md","ref":"30_单例_饿汉_静态代码块儿.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"31_单例_线程不安全_懒汉式.md","mtime":"2021-02-03T00:31:24.501Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-04T08:20:14.547Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"建造者模式_盖房子","level":"1.8.1","depth":2,"next":{"title":"建造者模式_原理类图","level":"1.8.2","depth":2,"path":"56_建造者模式_原理类图.md","ref":"56_建造者模式_原理类图.md","articles":[]},"previous":{"title":"建造者模式","level":"1.8","depth":1,"ref":"","articles":[{"title":"建造者模式_盖房子","level":"1.8.1","depth":2,"path":"55_建造者模式_盖房子.md","ref":"55_建造者模式_盖房子.md","articles":[]},{"title":"建造者模式_原理类图","level":"1.8.2","depth":2,"path":"56_建造者模式_原理类图.md","ref":"56_建造者模式_原理类图.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"55_建造者模式_盖房子.md","mtime":"2021-02-04T07:56:54.306Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-04T08:20:14.547Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

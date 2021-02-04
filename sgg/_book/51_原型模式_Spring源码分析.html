@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>单例线程不安全懒汉式 · GitBook</title>
+        <title>原型模式_Spring源码分析 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="32_单例_线程安全_懒汉式.html" />
+    <link rel="next" href="52_原型模式_浅拷贝.html" />
     
     
-    <link rel="prev" href="30_单例_饿汉_静态代码块儿.html" />
+    <link rel="prev" href="49_原型模式_克隆羊.html" />
     
 
     </head>
@@ -355,7 +355,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.3" data-path="31_单例_线程不安全_懒汉式.html">
+        <li class="chapter " data-level="1.5.3" data-path="31_单例_线程不安全_懒汉式.html">
             
                 <a href="31_单例_线程不安全_懒汉式.html">
             
@@ -549,7 +549,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="51_原型模式_Spring源码分析.html">
+        <li class="chapter active" data-level="1.7.2" data-path="51_原型模式_Spring源码分析.html">
             
                 <a href="51_原型模式_Spring源码分析.html">
             
@@ -668,7 +668,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >单例线程不安全懒汉式</a>
+        <a href="." >原型模式_Spring源码分析</a>
     </h1>
 </div>
 
@@ -683,53 +683,17 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x61D2;&#x6C49;&#x5F0F;&#x7EBF;&#x7A0B;&#x4E0D;&#x5B89;&#x5168;">&#x61D2;&#x6C49;&#x5F0F;(&#x7EBF;&#x7A0B;&#x4E0D;&#x5B89;&#x5168;)</h1>
-<h3 id="&#x4F18;&#x7F3A;&#x70B9;&#x8BF4;&#x660E;">&#x4F18;&#x7F3A;&#x70B9;&#x8BF4;&#x660E;</h3>
+                                <h1 id="&#x539F;&#x578B;&#x6A21;&#x5F0F;-spring&#x6E90;&#x7801;">&#x539F;&#x578B;&#x6A21;&#x5F0F; Spring&#x6E90;&#x7801;</h1>
 <ol>
-<li><p>&#x8D77;&#x5230;&#x4E86;Lazy Loading&#x7684;&#x6548;&#x679C;,&#x4F46;&#x662F;&#x53EA;&#x80FD;&#x5728;&#x5355;&#x7EBF;&#x7A0B;&#x4E0B;&#x4F7F;&#x7528;</p>
+<li><p>Spring&#x4E2D;&#x539F;&#x578B;bean&#x7684;&#x521B;&#x5EFA;,&#x5C31;&#x662F;&#x539F;&#x578B;&#x6A21;&#x5F0F;&#x7684;&#x5E94;&#x7528;</p>
 </li>
-<li><p>&#x5982;&#x679C;&#x5728;&#x591A;&#x7EBF;&#x7A0B;&#x4E0B;, &#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x8FDB;&#x5165;if(singleton == null)&#x5224;&#x65AD; &#x8BED;&#x53E5;&#x5757;,&#x8FD8;&#x672A;&#x6765;&#x5F97;&#x53CA;&#x5F80;&#x4E0B;&#x6267;&#x884C;,&#x53E6;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E5F;&#x901A;&#x8FC7;&#x4E86;&#x8FD9;&#x4E2A;&#x5224;&#x65AD;&#x8BED;&#x53E5;,&#x8FD9;&#x65F6;&#x4FBF;&#x4F1A;&#x4EA7;&#x751F;&#x591A;&#x4E2A;&#x5B9E;&#x4F8B;.</p>
-<p>&#x6240;&#x4EE5;&#x5728;&#x591A;&#x7EBF;&#x7A0B;&#x7684;&#x73AF;&#x5883;&#x4E0B;,&#x4E0D;&#x53EF;&#x4F7F;&#x7528;&#x79CD;&#x65B9;&#x5F0F;</p>
-</li>
-<li><p>&#x7ED3;&#x8BBA;:&#x5728;&#x5B9E;&#x4F8B;&#x5F00;&#x53D1;&#x4E2D;,&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;(&#x56E0;&#x4E3A;&#x4ED6;&#x6709;&#x6F5C;&#x5728;&#x7684;&#x5371;&#x9669;,&#x5C31;&#x4E0D;&#x80FD;&#x7528;,&#x4ED6;&#x5C31;&#x6709;&#x9519;&#x8BEF;&#x4E86;,&#x4E0D;&#x53EF;&#x7528;,&#x4E0D;&#x53EF;&#x7528;,&#x4E0D;&#x53EF;&#x7528;!)</p>
-<h3 id="&#x4EE3;&#x7801;&#x6F14;&#x793A;">&#x4EE3;&#x7801;&#x6F14;&#x793A;</h3>
-<p>```java
-package com.atguigu.principle.singleton.type03;</p>
+<li><p>&#x4EE3;&#x7801;&#x5206;&#x6790;+Debug&#x6E90;&#x7801;</p>
+<p>beans.xml</p>
 </li>
 </ol>
-<p>/**</p>
-<ul>
-<li>@author victor</li>
-<li>@site <a href="https://victorfengming.github.io/" target="_blank">https://victorfengming.github.io/</a></li>
-<li>@company XDL</li>
-<li>@project java_mode</li>
-<li>@package com.atguigu.principle.singleton.type03</li>
-<li>@created 2021-02-02 19:13</li>
-<li><p>@function &quot;&quot;
-*/
-public class SingletonTest03 {
- public static void main(String[] args) {</p>
-<p> }
-}</p>
-</li>
-</ul>
-<p>class Singleton{
-    private static Singleton instance;</p>
-<pre><code>private Singleton() {
-
-}
-
-// &#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x7684;&#x516C;&#x6709;&#x65B9;&#x6CD5;,&#x5F53;&#x4F7F;&#x7528;&#x5230;&#x8BE5;&#x65B9;&#x6CD5;&#x65F6;,&#x624D;&#x53BB;&#x521B;&#x5EFA;instance
-// &#x5373;&#x61D2;&#x6C49;&#x5F0F;
-
-public static Singleton getInstance() {
-    if (instance == null) {
-        instance = new Singleton();
-    }
-    return instance;
-}
-</code></pre><p>}</p>
-<p>```</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;id01&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.atguigu.spring.bean.Monster&quot;</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">&quot;prototype&quot;</span>/&gt;</span>
+</code></pre>
+<p><img src="img/QQ&#x622A;&#x56FE;20210204140429.png" alt=""></p>
 
                                 
                                 </section>
@@ -757,12 +721,12 @@ public static Singleton getInstance() {
 
             
                 
-                <a href="30_单例_饿汉_静态代码块儿.html" class="navigation navigation-prev " aria-label="Previous page: 单例饿汉静态代码块儿">
+                <a href="49_原型模式_克隆羊.html" class="navigation navigation-prev " aria-label="Previous page: 原型模式_克隆羊">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="32_单例_线程安全_懒汉式.html" class="navigation navigation-next " aria-label="Next page: 单例线程安全懒汉式">
+                <a href="52_原型模式_浅拷贝.html" class="navigation navigation-next " aria-label="Next page: 原型模式_浅拷贝">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -773,7 +737,7 @@ public static Singleton getInstance() {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"单例线程不安全懒汉式","level":"1.5.3","depth":2,"next":{"title":"单例线程安全懒汉式","level":"1.5.4","depth":2,"path":"32_单例_线程安全_懒汉式.md","ref":"32_单例_线程安全_懒汉式.md","articles":[]},"previous":{"title":"单例饿汉静态代码块儿","level":"1.5.2","depth":2,"path":"30_单例_饿汉_静态代码块儿.md","ref":"30_单例_饿汉_静态代码块儿.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"31_单例_线程不安全_懒汉式.md","mtime":"2021-02-03T00:31:24.501Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-04T08:20:14.547Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"原型模式_Spring源码分析","level":"1.7.2","depth":2,"next":{"title":"原型模式_浅拷贝","level":"1.7.3","depth":2,"path":"52_原型模式_浅拷贝.md","ref":"52_原型模式_浅拷贝.md","articles":[]},"previous":{"title":"原型模式_克隆羊","level":"1.7.1","depth":2,"path":"49_原型模式_克隆羊.md","ref":"49_原型模式_克隆羊.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"51_原型模式_Spring源码分析.md","mtime":"2021-02-04T06:05:03.268Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-04T08:20:14.547Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
