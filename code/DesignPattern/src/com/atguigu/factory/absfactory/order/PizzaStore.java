@@ -6,11 +6,11 @@ package com.atguigu.factory.absfactory.order;
  * Date: 2021-02-04 9:45 <br/>
  * <br/>
  *
- * @author yufengming
- * @version 产品版本信息 2021年02月04日9:45分 yufengming(yufengming@travelsky.com) 新建<br/>
+ * @author victor
+ * @version 产品版本信息 2021年02月04日9:45分 victor(victorfm@163.com) 新建<br/>
  * <p>
  * 修改记录
- * @email yufengming@travelsky.com
+ * @email victorfm@163.com
  * @project java_mode
  * @package com.atguigu.factory.absfactory.order
  */

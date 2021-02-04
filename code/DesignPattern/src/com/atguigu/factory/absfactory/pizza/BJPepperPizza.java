@@ -16,8 +16,6 @@ package com.atguigu.factory.absfactory.pizza;
  */
 public class BJPepperPizza extends Pizza {
 
-
-
     @Override
     public void prepare() {
         setName("北京的胡椒披萨");
