@@ -1,4 +1,4 @@
-package com.atguigu.adapter;
+package com.atguigu.adapter.classadapter;
 
 
 // 被适配的类
