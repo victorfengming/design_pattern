@@ -40,7 +40,6 @@ public class PizzaStore {
         // 创建伦敦口额为的各种披萨
 //        new LDOrderPizza();
 
-
         // 这个代码就不写了
 
         // 你永远无法叫醒一个装睡的人
