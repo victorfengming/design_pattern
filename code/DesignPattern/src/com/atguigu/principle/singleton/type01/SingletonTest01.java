@@ -1,14 +1,6 @@
-package com.atguigu.principle.singleton.type1;
+package com.atguigu.principle.singleton.type01;
 
-/**
- * @author victor
- * @site https://victorfengming.github.io/
- * @company XDL
- * @project java_mode
- * @package com.atguigu.principle.singleton.type1
- * @created 2021-02-02 18:43
- * @function ""
- */
+
 public class SingletonTest01 {
 
     // 1. 构造器私有化,外部不可以new
