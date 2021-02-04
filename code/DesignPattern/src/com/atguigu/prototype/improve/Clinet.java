@@ -14,10 +14,10 @@ public class Clinet {
         System.out.println(sheep4);
 
         /*
-        * Sheep{name='tom', age=1, color='白色'}
-        Sheep{name='tom', age=1, color='白色'}
-        Sheep{name='tom', age=1, color='白色'}
-        Sheep{name='tom', age=1, color='白色'}
+        * Sheep{name='tom', age=1, color='白色', address='蒙古样'}
+        Sheep{name='tom', age=1, color='白色', address='蒙古样'}
+        Sheep{name='tom', age=1, color='白色', address='蒙古样'}
+        Sheep{name='tom', age=1, color='白色', address='蒙古样'}
 
         Process finished with exit code 0
 
