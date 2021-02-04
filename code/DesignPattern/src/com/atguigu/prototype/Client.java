@@ -1,19 +1,5 @@
 package com.atguigu.prototype;
 
-/**
- * ClassName: Client <br/>
- * Description: Client <br/>
- * Date: 2021-02-04 12:44 <br/>
- * <br/>
- *
- * @author yufengming
- * @version 产品版本信息 2021年02月04日12:44分 yufengming(yufengming@travelsky.com) 新建<br/>
- * <p>
- * 修改记录
- * @email yufengming@travelsky.com
- * @project java_mode
- * @package com.atguigu.prototype
- */
 public class Client {
     public static void main(String[] args) {
         // 传统的方法
