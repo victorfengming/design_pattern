@@ -17,7 +17,18 @@ public class Clinet {
         System.out.println(p2.name);
         System.out.println(p2.deepCloneableTarget);
         /*
-        * 这种方式 就是可以 实现深拷贝
+        com.atguigu.prototype.deepclone.DeepProtoType@1540e19d
+        松江
+        com.atguigu.prototype.deepclone.DeepCloneableTarget@677327b6
+        com.atguigu.prototype.deepclone.DeepProtoType@14ae5a5
+        松江
+        com.atguigu.prototype.deepclone.DeepCloneableTarget@7f31245a
+
+        Process finished with exit code 0
+
+        * */
+        /*
+        * todo 这种方式 就是可以 实现深拷贝
         * 说白了就是,在里面 提取出来属性对象, 单独进行拷贝
         * */
     }
