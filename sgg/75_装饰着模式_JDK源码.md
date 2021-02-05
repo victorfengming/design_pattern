@@ -181,3 +181,7 @@ public class Decorator {
 ### 一句话
 
 装饰者模式: ___动态的将新功能附加到对象上___
+
+
+
+![](./img/meizi12.jpg)
