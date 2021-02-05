@@ -1015,44 +1015,38 @@
 <p>&#x6240;&#x4EE5;&#x5728;&#x591A;&#x7EBF;&#x7A0B;&#x7684;&#x73AF;&#x5883;&#x4E0B;,&#x4E0D;&#x53EF;&#x4F7F;&#x7528;&#x79CD;&#x65B9;&#x5F0F;</p>
 </li>
 <li><p>&#x7ED3;&#x8BBA;:&#x5728;&#x5B9E;&#x4F8B;&#x5F00;&#x53D1;&#x4E2D;,&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;(&#x56E0;&#x4E3A;&#x4ED6;&#x6709;&#x6F5C;&#x5728;&#x7684;&#x5371;&#x9669;,&#x5C31;&#x4E0D;&#x80FD;&#x7528;,&#x4ED6;&#x5C31;&#x6709;&#x9519;&#x8BEF;&#x4E86;,&#x4E0D;&#x53EF;&#x7528;,&#x4E0D;&#x53EF;&#x7528;,&#x4E0D;&#x53EF;&#x7528;!)</p>
-<h3 id="&#x4EE3;&#x7801;&#x6F14;&#x793A;">&#x4EE3;&#x7801;&#x6F14;&#x793A;</h3>
-<p>```java
-package com.atguigu.principle.singleton.type03;</p>
 </li>
 </ol>
-<p>/**</p>
-<ul>
-<li>@author victor</li>
-<li>@site <a href="https://victorfengming.github.io/" target="_blank">https://victorfengming.github.io/</a></li>
-<li>@company XDL</li>
-<li>@project java_mode</li>
-<li>@package com.atguigu.principle.singleton.type03</li>
-<li>@created 2021-02-02 19:13</li>
-<li><p>@function &quot;&quot;
-*/
-public class SingletonTest03 {
- public static void main(String[] args) {</p>
-<p> }
-}</p>
-</li>
-</ul>
-<p>class Singleton{
-    private static Singleton instance;</p>
-<pre><code>private Singleton() {
+<h3 id="&#x4EE3;&#x7801;&#x6F14;&#x793A;">&#x4EE3;&#x7801;&#x6F14;&#x793A;</h3>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.principle.singleton.type03;
 
-}
 
-// &#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x7684;&#x516C;&#x6709;&#x65B9;&#x6CD5;,&#x5F53;&#x4F7F;&#x7528;&#x5230;&#x8BE5;&#x65B9;&#x6CD5;&#x65F6;,&#x624D;&#x53BB;&#x521B;&#x5EFA;instance
-// &#x5373;&#x61D2;&#x6C49;&#x5F0F;
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SingletonTest03</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
 
-public static Singleton getInstance() {
-    if (instance == null) {
-        instance = new Singleton();
     }
-    return instance;
 }
-</code></pre><p>}</p>
-<p>```</p>
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Singleton</span></span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Singleton instance;
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">Singleton</span><span class="hljs-params">()</span> </span>{
+
+    }
+
+    <span class="hljs-comment">// &#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x7684;&#x516C;&#x6709;&#x65B9;&#x6CD5;,&#x5F53;&#x4F7F;&#x7528;&#x5230;&#x8BE5;&#x65B9;&#x6CD5;&#x65F6;,&#x624D;&#x53BB;&#x521B;&#x5EFA;instance</span>
+    <span class="hljs-comment">// &#x5373;&#x61D2;&#x6C49;&#x5F0F;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Singleton <span class="hljs-title">getInstance</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (instance == <span class="hljs-keyword">null</span>) {
+            instance = <span class="hljs-keyword">new</span> Singleton();
+        }
+        <span class="hljs-keyword">return</span> instance;
+    }
+}
+</code></pre>
+<p><img src="img/meizi06.jpg" alt=""></p>
 
                                 
                                 </section>
@@ -1096,7 +1090,7 @@ public static Singleton getInstance() {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"线程不安全_懒汉式","level":"1.5.3","depth":2,"next":{"title":"线程安全_懒汉式","level":"1.5.4","depth":2,"path":"32_单例_线程安全_懒汉式.md","ref":"32_单例_线程安全_懒汉式.md","articles":[]},"previous":{"title":"饿汉_静态代码块儿","level":"1.5.2","depth":2,"path":"30_单例_饿汉_静态代码块儿.md","ref":"30_单例_饿汉_静态代码块儿.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"31_单例_线程不安全_懒汉式.md","mtime":"2021-02-04T10:09:35.590Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-05T14:44:05.220Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"线程不安全_懒汉式","level":"1.5.3","depth":2,"next":{"title":"线程安全_懒汉式","level":"1.5.4","depth":2,"path":"32_单例_线程安全_懒汉式.md","ref":"32_单例_线程安全_懒汉式.md","articles":[]},"previous":{"title":"饿汉_静态代码块儿","level":"1.5.2","depth":2,"path":"30_单例_饿汉_静态代码块儿.md","ref":"30_单例_饿汉_静态代码块儿.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"31_单例_线程不安全_懒汉式.md","mtime":"2021-02-05T15:00:13.989Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-05T15:03:01.795Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
