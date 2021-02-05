@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="64_适配器模式_SpringMVC.html" />
+    
     
     <link rel="prev" href="62_对象适配器_电压问题.html" />
     
@@ -281,14 +283,14 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="23_UML相关.html">
+        <li class="chapter " data-level="1.4" >
             
-                <a href="23_UML相关.html">
+                <span>
             
                     
                     工具
             
-                </a>
+                </span>
             
 
             
@@ -780,6 +782,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.9.5" data-path="64_适配器模式_SpringMVC.html">
+            
+                <a href="64_适配器模式_SpringMVC.html">
+            
+                    
+                    源码应用
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -830,13 +845,89 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x63A5;&#x53E3;&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;i">&#x63A5;&#x53E3;&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;i</h1>
+                                <h1 id="&#x63A5;&#x53E3;&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;">&#x63A5;&#x53E3;&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;</h1>
 <h2 id="&#x63A5;&#x53E3;&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;&#x4ECB;&#x7ECD;">&#x63A5;&#x53E3;&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;&#x4ECB;&#x7ECD;</h2>
 <ol>
 <li>&#x4E00;&#x4E9B;&#x4E66;&#x4E0A;&#x8BF4;: &#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;(Default Adapter Pattern)&#x6216;&#x7F3A;&#x7701;&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;</li>
-<li>&#x5F53;&#x4E0D;&#x9700;&#x8981;&#x5168;&#x90E8;&#x5B9E;&#x73B0;&#x63A5;&#x53E3;&#x63D0;&#x4F9B;&#x7684;&#x65B9;&#x6CD5;&#x65F6;,&#x53EF;&#x5148;&#x8BBE;&#x8BA1;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x5B9E;&#x73B0;&#x63A5;&#x53E3;,&#x5E76;&#x4E3A;&#x8BE5;&#x63A5;&#x53E3;&#x4E2D;&#x6BCF;&#x4E2A;&#x65B9;&#x6CD5;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x5B9E;&#x73B0;(&#x7A7A;&#x65B9;&#x6CD5;),&#x90A3;&#x4E48;&#x8BE5;&#x62BD;&#x8C61;&#x7C7B;&#x7684;&#x5B50;&#x7C7B;&#x53EF;&#x6709;&#x9009;&#x62E9;&#x5730;&#x8986;&#x76D6;&#x7236;&#x7C7B;&#x7684;&#x67D0;&#x4E9B;&#x65B9;&#x6CD5;&#x6765;&#x5B9E;&#x73B0;&#x9700;&#x6C42;</li>
+<li>&#x5F53;&#x4E0D;&#x9700;&#x8981;&#x5168;&#x90E8;&#x5B9E;&#x73B0;&#x63A5;&#x53E3;&#x63D0;&#x4F9B;&#x7684;&#x65B9;&#x6CD5;&#x65F6;,&#x53EF;&#x5148;&#x8BBE;&#x8BA1;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x7C7B;&#x5B9E;&#x73B0;&#x63A5;&#x53E3;,&#x5E76;&#x4E3A;&#x8BE5;&#x63A5;&#x53E3;&#x4E2D;&#x6BCF;&#x4E2A;&#x65B9;&#x6CD5;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x5B9E;&#x73B0;(&#x7A7A;&#x65B9;&#x6CD5;),&#x90A3;&#x4E48;&#x8BE5;&#x62BD;&#x8C61;&#x7C7B;&#x7684;&#x5B50;&#x7C7B;&#x53EF;&#x6709;&#x9009;&#x62E9;&#x5730;&#x8986;&#x76D6;&#x7236;&#x7C7B;&#x7684;&#x67D0;&#x4E9B;&#x65B9;&#x6CD5;&#x6765;&#x5B9E;&#x73B0;&#x9700;&#x6C42;</li>
 <li>&#x9002;&#x7528;&#x4E8E;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x4E0D;&#x60F3;&#x4F7F;&#x7528;&#x5176;&#x6240;&#x6709;&#x7684;&#x65B9;&#x6CD5;&#x7684;&#x60C5;&#x51B5;</li>
 </ol>
+<h3 id="&#x63A5;&#x53E3;&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;">&#x63A5;&#x53E3;&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;</h3>
+<ol>
+<li><p>Android&#x4E2D;&#x7684;&#x5C5E;&#x6027;&#x52A8;&#x753B;ValueAnimator&#x7C7B;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;addListener(AnimatorListener listener)&#x65B9;&#x6CD5;&#x6DFB;&#x52A0;&#x76D1;&#x542C;&#x5668;,&#x90A3;&#x4E48;&#x5E38;&#x89C4;&#x5199;&#x6CD5;&#x5982;&#x53F3;:</p>
+</li>
+<li><p>&#x6709;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x4E0D;&#x60F3;&#x4E0A;&#x7EBF;</p>
+<p> Animator.AnimatorListener&#x63A5;&#x53E3;&#x7684;&#x5168;&#x90E8;&#x65B9;&#x6CD5;,&#x6211;&#x4EEC;&#x53EA;&#x60F3;&#x76D1;&#x542C;onAnimationStart,&#x6211;&#x4EEC;&#x4F1A;&#x5982;&#x4E0B;&#x5199;</p>
+<p> <img src="img/QQ&#x622A;&#x56FE;20210205091640.png" alt=""></p>
+</li>
+</ol>
+<pre><code>![](./img/QQ&#x622A;&#x56FE;20210205091817.png)
+
+&#x6211;&#x53EA;&#x662F;&#x60F3;&#x8981;&#x5B9E;&#x73B0;onAnimationStart&#x65B9;&#x6CD5;
+
+&#x5176;&#x4ED6;&#x7684;&#x9ED8;&#x8BA4;&#x5B9E;&#x73B0;&#x4E86;,&#x6211;&#x9700;&#x8981;&#x5173;&#x5FC3;
+</code></pre><ol>
+<li>AnimatorListenerAdapter&#x7C7B;,&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x9002;&#x914D;&#x5668;,&#x4EE3;&#x7801;&#x5982;&#x53F3;&#x56FE;: &#x5B83;&#x7A7A;&#x5B9E;&#x73B0;&#x4E86;Animator.AnimatorListener&#x7C7B;(src)&#x7684;&#x6240;&#x6709;&#x65B9;&#x6CD5;.</li>
+<li><p>AnimatorListener&#x662F;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;</p>
+<p> <img src="img/QQ&#x622A;&#x56FE;20210205092443.png" alt=""></p>
+<p> &#x6211;&#x73B0;&#x5728;&#x6709;&#x4E00;&#x4E2A;&#x9700;&#x6C42;,&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x9002;&#x914D;&#x5668;&#x91CC;&#x9762;&#x7684;&#x65B9;&#x6CD5;,&#x6211;&#x6709;&#x7684;&#x60F3;&#x4F7F;&#x7528;,&#x6709;&#x7684;&#x4E0D;&#x60F3;&#x4F7F;&#x7528;,&#x90A3;&#x4E48;&#x770B;&#x6211;&#x4E0B;&#x4E00;&#x6B65;&#x64CD;&#x4F5C;
+ <img src="img/QQ&#x622A;&#x56FE;20210205092519.png" alt=""></p>
+</li>
+<li><p>&#x7A0B;&#x5E8F;&#x91CC;&#x7684;&#x533F;&#x540D;&#x5185;&#x90E8;&#x7C7B;&#x5C31;&#x662F;Listener,&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x7C7B;</p>
+<p> <img src="img/QQ&#x622A;&#x56FE;20210205092956.png" alt=""></p>
+</li>
+</ol>
+<h3 id="&#x7A0B;&#x5E8F;&#x7C7B;&#x56FE;">&#x7A0B;&#x5E8F;&#x7C7B;&#x56FE;</h3>
+<h3 id="&#x63D0;&#x95EE;">&#x63D0;&#x95EE;</h3>
+<p>&#x90FD;&#x5B9E;&#x73B0;&#x4E86;&#x8FD8;&#x53EB;&#x62BD;&#x8C61;,&#x6211;&#x5B66;&#x4E86;&#x4E2A;&#x5047;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;
+<img src="img/QQ&#x622A;&#x56FE;20210205093259.png" alt=""></p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.adapter.interfaceadapter;
+
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Interface4</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">m1</span><span class="hljs-params">()</span></span>;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">m2</span><span class="hljs-params">()</span></span>;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">m3</span><span class="hljs-params">()</span></span>;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">m4</span><span class="hljs-params">()</span></span>;
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.adapter.interfaceadapter;
+
+<span class="hljs-comment">// &#x5728;AbsAdapter&#x91CC;&#x9762;&#x5C06;Interface4&#x7684;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x9ED8;&#x8BA4;&#x5B9E;&#x73B0;</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AbsAdapter</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Interface4</span></span>{
+    <span class="hljs-comment">// &#x9ED8;&#x8BA4;&#x5B9E;&#x73B0;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">m1</span><span class="hljs-params">()</span></span>{}
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">m2</span><span class="hljs-params">()</span></span>{}
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">m3</span><span class="hljs-params">()</span></span>{}
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">m4</span><span class="hljs-params">()</span></span>{}
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.adapter.interfaceadapter;
+
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Client</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">// &#x63A5;&#x53E3;&#x9002;&#x914D;,&#x6211;&#x8FD9;&#x91CC;&#x60F3;&#x8981;&#x7528;&#x54EA;&#x4E2A;&#x5C31;&#x7528;&#x54EA;&#x4E2A;</span>
+        AbsAdapter absAdapter = <span class="hljs-keyword">new</span> AbsAdapter(){
+            <span class="hljs-comment">// &#x53EA;&#x9700;&#x8981;&#x53BB;&#x8986;&#x76D6;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4F7F;&#x7528; &#x63A5;&#x53E3;&#x65B9;&#x6CD5;</span>
+
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">m1</span><span class="hljs-params">()</span> </span>{
+                System.out.println(<span class="hljs-string">&quot;&#x4F7F;&#x7528;&#x4E86;m1&#x7684;&#x65B9;&#x6CD5;&quot;</span>);
+            }
+        };
+
+        absAdapter.m1();
+        <span class="hljs-comment">/*
+        &#x4F7F;&#x7528;&#x4E86;m1&#x7684;&#x65B9;&#x6CD5;
+
+        Process finished with exit code 0
+        * */</span>
+    }
+}
+</code></pre>
+<h3 id="&#x4E00;&#x53E5;&#x8BDD;">&#x4E00;&#x53E5;&#x8BDD;</h3>
+<p>&#x8BF4;&#x767D;&#x4E86;&#x5C31;&#x662F;,&#x4E0D;&#x7BA1;&#x4F60;&#x5B9E;&#x4E0D;&#x5B9E;&#x73B0;,&#x6211;&#x5148;&#x90FD;&#x8FDB;&#x884C;&#x7A7A;&#x5B9E;&#x73B0;,&#x4F60;&#x8981;&#x662F;&#x60F3;&#x5B9E;&#x73B0;,&#x4F60;&#x5728;&#x5B9E;&#x73B0;&#x6211;&#x4E5F;&#x7BA1;&#x4E0D;&#x7740;</p>
 
                                 
                                 </section>
@@ -864,10 +955,14 @@
 
             
                 
-                <a href="62_对象适配器_电压问题.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 对象适配器">
+                <a href="62_对象适配器_电压问题.html" class="navigation navigation-prev " aria-label="Previous page: 对象适配器">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="64_适配器模式_SpringMVC.html" class="navigation navigation-next " aria-label="Next page: 源码应用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -876,7 +971,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"接口适配器","level":"1.9.4","depth":2,"previous":{"title":"对象适配器","level":"1.9.3","depth":2,"path":"62_对象适配器_电压问题.md","ref":"62_对象适配器_电压问题.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"63_接口适配器_电压问题.md","mtime":"2021-02-05T00:20:35.954Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-05T00:24:47.493Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"接口适配器","level":"1.9.4","depth":2,"next":{"title":"源码应用","level":"1.9.5","depth":2,"path":"64_适配器模式_SpringMVC.md","ref":"64_适配器模式_SpringMVC.md","articles":[]},"previous":{"title":"对象适配器","level":"1.9.3","depth":2,"path":"62_对象适配器_电压问题.md","ref":"62_对象适配器_电压问题.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"63_接口适配器_电压问题.md","mtime":"2021-02-05T01:57:27.384Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-05T02:59:15.845Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
