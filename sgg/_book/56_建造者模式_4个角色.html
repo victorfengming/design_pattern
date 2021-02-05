@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>克隆羊 · GitBook</title>
+        <title>4个角色 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="51_原型模式_Spring源码分析.html" />
+    <link rel="next" href="57_建造者模式_代码演示.html" />
     
+    
+    <link rel="prev" href="55_建造者模式_盖房子.html" />
     
 
     </head>
@@ -573,7 +575,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.7.1" data-path="49_原型模式_克隆羊.html">
+        <li class="chapter " data-level="1.7.1" data-path="49_原型模式_克隆羊.html">
             
                 <a href="49_原型模式_克隆羊.html">
             
@@ -657,7 +659,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.2" data-path="56_建造者模式_4个角色.html">
+        <li class="chapter active" data-level="1.8.2" data-path="56_建造者模式_4个角色.html">
             
                 <a href="56_建造者模式_4个角色.html">
             
@@ -815,7 +817,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >克隆羊</a>
+        <a href="." >4个角色</a>
     </h1>
 </div>
 
@@ -830,139 +832,31 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x539F;&#x578B;&#x6A21;&#x5F0F;">&#x539F;&#x578B;&#x6A21;&#x5F0F;</h1>
-<h3 id="&#x514B;&#x9686;&#x7F8A;&#x95EE;&#x9898;">&#x514B;&#x9686;&#x7F8A;&#x95EE;&#x9898;</h3>
-<p> &#x73B0;&#x5728;&#x6709;&#x4E00;&#x53EA;&#x7F8A;tom,&#x59D3;&#x540D;&#x4E3A;: tom,&#x5E74;&#x9F84;&#x4E3A;1,&#x989C;&#x8272;&#x4E3A;: &#x767D;&#x8272;,&#x8BF7;&#x7F16;&#x5199;&#x7A0B;&#x5E8F;&#x521B;&#x5EFA;&#x548C;tom&#x7F8A;&#x5C5E;&#x6027;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x7684;10&#x53EA;&#x7F8A;..</p>
-<h3 id="&#x5B9E;&#x8DF5;&#x51FA;&#x771F;&#x77E5;">&#x5B9E;&#x8DF5;&#x51FA;&#x771F;&#x77E5;</h3>
+                                <h1 id="&#x5EFA;&#x9020;&#x8005;&#x6A21;&#x5F0F;&#x57FA;&#x672C;&#x4ECB;&#x7ECD;">&#x5EFA;&#x9020;&#x8005;&#x6A21;&#x5F0F;&#x57FA;&#x672C;&#x4ECB;&#x7ECD;</h1>
+<h3 id="&#x6982;&#x5FF5;">&#x6982;&#x5FF5;</h3>
 <ol>
-<li>&#x6700;&#x7B80;&#x5355;&#x7684;&#x601D;&#x8DEF;</li>
-</ol>
-<p> <img src="img/QQ&#x622A;&#x56FE;20210204124057.png" alt=""></p>
-<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.prototype;
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Sheep</span> </span>{
-    <span class="hljs-keyword">private</span> String name;
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> age;
-    <span class="hljs-keyword">private</span> String color;
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Sheep</span><span class="hljs-params">(String name, <span class="hljs-keyword">int</span> age, String color)</span> </span>{
-        <span class="hljs-keyword">this</span>.name = name;
-        <span class="hljs-keyword">this</span>.age = age;
-        <span class="hljs-keyword">this</span>.color = color;
-    }
-
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Sheep{&quot;</span> +
-                <span class="hljs-string">&quot;name=&apos;&quot;</span> + name + <span class="hljs-string">&apos;\&apos;&apos;</span> +
-                <span class="hljs-string">&quot;, age=&quot;</span> + age +
-                <span class="hljs-string">&quot;, color=&apos;&quot;</span> + color + <span class="hljs-string">&apos;\&apos;&apos;</span> +
-                <span class="hljs-string">&apos;}&apos;</span>;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">return</span> name;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setName</span><span class="hljs-params">(String name)</span> </span>{
-        <span class="hljs-keyword">this</span>.name = name;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getAge</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">return</span> age;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setAge</span><span class="hljs-params">(<span class="hljs-keyword">int</span> age)</span> </span>{
-        <span class="hljs-keyword">this</span>.age = age;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getColor</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">return</span> color;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setColor</span><span class="hljs-params">(String color)</span> </span>{
-        <span class="hljs-keyword">this</span>.color = color;
-    }
-}
-</code></pre>
-<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.prototype;
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Client</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        <span class="hljs-comment">// &#x4F20;&#x7EDF;&#x7684;&#x65B9;&#x6CD5;</span>
-        Sheep sheep = <span class="hljs-keyword">new</span> Sheep(<span class="hljs-string">&quot;tom&quot;</span>, <span class="hljs-number">1</span>, <span class="hljs-string">&quot;&#x767D;&#x8272;&quot;</span>);
-        <span class="hljs-comment">// &#x7528;&#x7B2C;&#x4E00;&#x6B21;&#x7684;sheep &#x7684;&#x4FE1;&#x606F;&#x53BB;&#x521D;&#x59CB;&#x5316; &#x4E0B;&#x4E00;&#x53EA;&#x7F8A;&#x7684;&#x5C5E;&#x6027;</span>
-
-        Sheep sheep2 = <span class="hljs-keyword">new</span> Sheep(sheep.getName(), sheep.getAge(), sheep.getColor());
-        Sheep sheep3 = <span class="hljs-keyword">new</span> Sheep(sheep.getName(), sheep.getAge(), sheep.getColor());
-        Sheep sheep4 = <span class="hljs-keyword">new</span> Sheep(sheep.getName(), sheep.getAge(), sheep.getColor());
-        Sheep sheep5 = <span class="hljs-keyword">new</span> Sheep(sheep.getName(), sheep.getAge(), sheep.getColor());
-        Sheep sheep6 = <span class="hljs-keyword">new</span> Sheep(sheep.getName(), sheep.getAge(), sheep.getColor());
-        Sheep sheep7 = <span class="hljs-keyword">new</span> Sheep(sheep.getName(), sheep.getAge(), sheep.getColor());
-        Sheep sheep8 = <span class="hljs-keyword">new</span> Sheep(sheep.getName(), sheep.getAge(), sheep.getColor());
-        Sheep sheep9 = <span class="hljs-keyword">new</span> Sheep(sheep.getName(), sheep.getAge(), sheep.getColor());
-
-        System.out.println(sheep);
-        System.out.println(sheep2);
-        System.out.println(sheep3);
-        System.out.println(sheep4);
-        System.out.println(sheep5);
-        System.out.println(sheep6);
-        System.out.println(sheep7);
-        System.out.println(sheep8);
-        System.out.println(sheep9);
-    }
-}
-</code></pre>
-<p>```shell script
-Sheep{name=&apos;tom&apos;, age=1, color=&apos;&#x767D;&#x8272;&apos;}
-Sheep{name=&apos;tom&apos;, age=1, color=&apos;&#x767D;&#x8272;&apos;}
-Sheep{name=&apos;tom&apos;, age=1, color=&apos;&#x767D;&#x8272;&apos;}
-Sheep{name=&apos;tom&apos;, age=1, color=&apos;&#x767D;&#x8272;&apos;}
-Sheep{name=&apos;tom&apos;, age=1, color=&apos;&#x767D;&#x8272;&apos;}
-Sheep{name=&apos;tom&apos;, age=1, color=&apos;&#x767D;&#x8272;&apos;}
-Sheep{name=&apos;tom&apos;, age=1, color=&apos;&#x767D;&#x8272;&apos;}
-Sheep{name=&apos;tom&apos;, age=1, color=&apos;&#x767D;&#x8272;&apos;}
-Sheep{name=&apos;tom&apos;, age=1, color=&apos;&#x767D;&#x8272;&apos;}</p>
-<p>Process finished with exit code 0</p>
-<p>```</p>
-<h3 id="&#x4F20;&#x7EDF;&#x65B9;&#x5F0F;&#x89E3;&#x51B3;&#x514B;&#x9686;&#x7F8A;&#x95EE;&#x9898;">&#x4F20;&#x7EDF;&#x65B9;&#x5F0F;&#x89E3;&#x51B3;&#x514B;&#x9686;&#x7F8A;&#x95EE;&#x9898;</h3>
-<p>&#x4F20;&#x7EDF;&#x7684;&#x65B9;&#x5F0F;&#x7684;&#x4F18;&#x7F3A;&#x70B9;</p>
-<ol>
-<li><p>&#x4F18;&#x70B9;&#x662F;&#x6BD4;&#x8F83;&#x597D;&#x7406;&#x89E3;,&#x7B80;&#x5355;&#x6613;&#x64CD;&#x4F5C;.</p>
+<li><p><strong>&#x5EFA;&#x9020;&#x8005;&#x6A21;&#x5F0F;(Builder Pattern)</strong> &#x53C8;&#x53EB;&#x751F;&#x6210;&#x5668;&#x6A21;&#x5F0F;,&#x662F;&#x4E00;&#x79CD;&#x5BF9;&#x8C61;&#x6784;&#x5EFA;&#x6A21;&#x5F0F;.
+&#x5B83;&#x53EF;&#x4EE5;&#x5C06;&#x590D;&#x6742;&#x5BF9;&#x8C61;&#x7684;&#x6784;&#x5EFA;&#x8FC7;&#x7A0B;&#x62BD;&#x8C61;&#x51FA;&#x6765;(&#x62BD;&#x8C61;&#x7C7B;&#x522B;),&#x4F7F;&#x8FD9;&#x4E2A;&#x62BD;&#x8C61;&#x8FC7;&#x7A0B;&#x7684;&#x4E0D;&#x540C;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x6784;&#x9020;&#x51FA;&#x4E0D;&#x540C;&#x8868;&#x73B0;(&#x5C5E;&#x6027;)&#x7684;&#x5BF9;&#x8C61;.</p>
 </li>
-<li><p>&#x5728;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#x65F6;,&#x603B;&#x662F;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x83B7;&#x53D6;&#x539F;&#x59CB;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;,&#x5982;&#x679C;&#x521B;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#x65F6;,&#x6548;&#x7387;&#x8F83;&#x4F4E;</p>
-</li>
-<li><p>&#x603B;&#x662F;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x521D;&#x59CB;&#x5316;&#x5BF9;&#x8C61;,&#x800C;&#x4E0D;&#x662F;&#x52A8;&#x6001;&#x5730;&#x83B7;&#x5F97;&#x5BF9;&#x8C61;&#x8FD0;&#x884C;&#x65F6;&#x7684;&#x72B6;&#x6001;,&#x4E0D;&#x591F;&#x7075;&#x6D3B;</p>
-</li>
-<li><p>&#x6539;&#x8FDB;&#x7684;&#x601D;&#x8DEF;&#x5206;&#x6790;</p>
+<li><p><strong>&#x5EFA;&#x9020;&#x8005;&#x6A21;&#x5F0F;</strong> &#x662F;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x590D;&#x6742;&#x7684;&#x5BF9;&#x8C61;,&#x4ED6;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x53EA;&#x901A;&#x8FC7;&#x6307;&#x5B9A;&#x590D;&#x6742;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x578B;&#x548C;&#x5185;&#x5BB9;&#x5C31;&#x53EF;&#x4EE5;&#x6784;&#x5EFA;&#x5B83;&#x4EEC;,&#x7528;&#x6237;&#x4E0D;&#x9700;&#x8981;&#x77E5;&#x9053;&#x5185;&#x90E8;&#x7684;&#x5177;&#x4F53;&#x6784;&#x5EFA;&#x7EC6;&#x8282;.</p>
+<p><img src="img/QQ&#x622A;&#x56FE;20210204160131.png" alt=""></p>
 </li>
 </ol>
-<p><strong>&#x601D;&#x8DEF;</strong> : Java&#x4E2D;Object&#x7C7B;&#x662F;&#x6240;&#x6709;&#x7C7B;&#x7684;&#x6839;&#x7C7B;,Object&#x7C7B;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;clone()&#x65B9;&#x6CD5;,&#x8BE5;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5C06;&#x4E00;&#x4E2A;Java&#x5BF9;&#x8C61;&#x590D;&#x5236;&#x4E00;&#x4EFD;,&#x4F46;&#x662F;&#x9700;&#x8981;&#x5B9E;&#x73B0;clone&#x7684;Java&#x7C7B;&#x5FC5;&#x987B;&#x8981;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;Cloneable,&#x8BE5;&#x63A5;&#x53E3;&#x8868;&#x793A;&#x8BE5;&#x7C7B;&#x80FD;&#x591F;&#x590D;&#x5236;&#x4E14;&#x5177;&#x6709;&#x590D;&#x5236;&#x7684;&#x80FD;&#x529B; =&gt; &#x539F;&#x578B;&#x6A21;&#x5F0F;</p>
-<h1 id="&#x539F;&#x578B;&#x6A21;&#x5F0F;">&#x539F;&#x578B;&#x6A21;&#x5F0F;</h1>
-<h3 id="&#x57FA;&#x672C;&#x4ECB;&#x7ECD;">&#x57FA;&#x672C;&#x4ECB;&#x7ECD;</h3>
+<hr>
+<p> python &#x4E2D;&#x7684;&#x751F;&#x6210;&#x5668;? <a href="https://www.runoob.com/python3/python3-iterator-generator.html" target="_blank">&#x83DC;&#x9E1F;</a></p>
+<hr>
+<h3 id="&#x5EFA;&#x9020;&#x8005;&#x6A21;&#x5F0F;&#x7684;4&#x4E2A;&#x89D2;&#x8272;">&#x5EFA;&#x9020;&#x8005;&#x6A21;&#x5F0F;&#x7684;4&#x4E2A;&#x89D2;&#x8272;</h3>
 <ol>
-<li><p>&#x539F;&#x578B;&#x6A21;&#x5F0F;(Prototype&#x6A21;&#x5F0F;&#x662F;&#x6307;:&#x7528;&#x539F;&#x578B;&#x5B9E;&#x4F8B;&#x6307;&#x5B9A;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x7684;&#x79CD;&#x7C7B;,&#x5E76;&#x4E14;&#x901A;&#x8FC7;&#x62F7;&#x8D1D;&#x8FD9;&#x4E9B;&#x539F;&#x578B;,&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x5BF9;&#x8C61;)</p>
-</li>
-<li><p>&#x539F;&#x578B;&#x6A21;&#x5F0F;&#x662F;&#x4E00;&#x79CD;&#x521B;&#x5EFA;&#x578B;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;,&#x5141;&#x8BB8;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x518D;&#x521B;&#x5EFA;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x53EF;&#x5B9A;&#x5236;&#x7684;&#x5BF9;&#x8C61;,&#x65E0;&#x9700;&#x77E5;&#x9053;&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x7684;&#x7EC6;&#x8282;</p>
-</li>
-<li><p>&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#x662F;:&#x901A;&#x8FC7;&#x5C06;&#x4E00;&#x4E2A;&#x539F;&#x578B;&#x5BF9;&#x8C61;&#x4F20;&#x7ED9;&#x90A3;&#x4E2A;&#x8981;&#x53D1;&#x52A8;&#x521B;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;,&#x8FD9;&#x4E2A;&#x8981;&#x53D1;&#x52A8;&#x521B;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;&#x901A;&#x8FC7;&#x8BF7;&#x6C42;&#x539F;&#x578B;&#x5BF9;&#x8C61;&#x62F7;&#x8D1D;&#x5B83;&#x4EEC;&#x81EA;&#x5DF1;&#x6765;&#x5B9E;&#x65BD;&#x521B;&#x5EFA;,&#x5373;: &#x5BF9;&#x8C61;.clone()</p>
-</li>
-<li><p>&#x5F62;&#x8C61;&#x7684;&#x7406;&#x89E3;: &#x5B59;&#x5927;&#x5723;&#x62D4;&#x51FA;&#x7334;&#x6BDB;,&#x53D8;&#x51FA;&#x5176;&#x4ED6;&#x7334;&#x5B50;</p>
-</li>
+<li>Product(&#x4EA7;&#x54C1;&#x89D2;&#x8272;): &#x4E00;&#x4E2A;&#x5177;&#x4F53;&#x7684;&#x4EA7;&#x54C1;&#x5BF9;&#x8C61;</li>
+<li>Builder(&#x62BD;&#x8C61;&#x5EFA;&#x9020;&#x8005;): &#x521B;&#x5EFA;&#x4E00;&#x4E2A;Product&#x5BF9;&#x8C61;&#x7684;&#x5404;&#x4E2A;&#x90E8;&#x4EF6;&#x6307;&#x5B9A;&#x7684;&#x63A5;&#x53E3;</li>
+<li>ConcreteBuilder(&#x5177;&#x4F53;&#x5EFA;&#x9020;&#x8005;): &#x5B9E;&#x73B0;&#x63A5;&#x53E3;,&#x6784;&#x5EFA;&#x548C;&#x88C5;&#x914D;&#x5404;&#x4E2A;&#x90E8;&#x4EF6;.</li>
+<li>Director(&#x6307;&#x6325;&#x8005;): &#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;Builder&#x63A5;&#x53E3;&#x7684;&#x5BF9;&#x8C61;.&#x5B83;&#x4E3B;&#x8981;&#x662F;&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x590D;&#x6742;&#x5BF9;&#x8C61;.&#x4ED6;&#x4E3B;&#x8981;&#x6709;2&#x4E2A;&#x4F5C;&#x7528;,</li>
+<li>&#x4E00;&#x662F;: &#x9694;&#x79BB;&#x4E86;&#x5BA2;&#x6237;&#x4E0E;&#x5BF9;&#x8C61;&#x7684;&#x751F;&#x4EA7;&#x8FC7;&#x7A0B;,</li>
+<li>&#x4E8C;&#x662F;: &#x8D1F;&#x8D23;&#x63A7;&#x5236;&#x4EA7;&#x54C1;&#x5BF9;&#x8C61;&#x7684;&#x751F;&#x4EA7;&#x8FC7;&#x7A0B;</li>
 </ol>
-<p><img src="img/QQ&#x622A;&#x56FE;20210204130250.png" alt=""></p>
-<h3 id="&#x539F;&#x578B;&#x6A21;&#x5F0F;---&#x539F;&#x7406;&#x7ED3;&#x6784;&#x56FE;uml&#x7C7B;&#x56FE;">&#x539F;&#x578B;&#x6A21;&#x5F0F; - &#x539F;&#x7406;&#x7ED3;&#x6784;&#x56FE;(UML&#x7C7B;&#x56FE;)</h3>
-<p> <img src="img/QQ&#x622A;&#x56FE;20210204130423.png" alt=""></p>
-<h4 id="&#x539F;&#x7406;&#x7ED3;&#x6784;&#x56FE;&#x8BF4;&#x660E;">&#x539F;&#x7406;&#x7ED3;&#x6784;&#x56FE;&#x8BF4;&#x660E;</h4>
-<ol>
-<li>Prototype:&#x539F;&#x578B;&#x7C7B;,&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x514B;&#x9686;&#x81EA;&#x5DF1;&#x7684;&#x63A5;&#x53E3;</li>
-<li>ConcretePrototype: &#x5177;&#x4F53;&#x7684;&#x539F;&#x578B;&#x7C7B;,&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x514B;&#x9686;&#x81EA;&#x5DF1;&#x7684;&#x64CD;&#x4F5C;</li>
-<li>Client &#x8BA9;&#x4E00;&#x4E2A;&#x539F;&#x578B;&#x5BF9;&#x8C61;&#x514B;&#x9686;&#x81EA;&#x5DF1;,&#x4ECE;&#x800C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5BF9;&#x8C61;(&#x5C5E;&#x6027;&#x4E00;&#x6837;)</li>
-</ol>
-<h1 id="&#x539F;&#x578B;&#x6A21;&#x5F0F;&#x89E3;&#x51B3;&#x514B;&#x9686;&#x7F8A;-&#x95EE;&#x9898;">&#x539F;&#x578B;&#x6A21;&#x5F0F;&#x89E3;&#x51B3;&#x514B;&#x9686;&#x7F8A; &#x95EE;&#x9898;</h1>
-<p> &#x539F;&#x578B;&#x6A21;&#x5F0F;&#x89E3;&#x51B3;&#x514B;&#x9686;&#x7F8A;&#x95EE;&#x9898;&#x7684;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;</p>
-<p> &#x4F7F;&#x7528; <strong>&#x539F;&#x578B;&#x6A21;&#x5F0F;</strong> &#x6539;&#x8FDB;&#x4F20;&#x7EDF;&#x65B9;&#x5F0F;,&#x8BA9;&#x7A0B;&#x5E8F;&#x5177;&#x6709;&#x66F4;&#x9AD8;&#x7684;&#x6548;&#x7387;&#x548C;&#x6269;&#x5C55;&#x6027;</p>
+<h3 id="&#x5EFA;&#x9020;&#x8005;&#x6A21;&#x5F0F;&#x539F;&#x7406;&#x7C7B;&#x56FE;">&#x5EFA;&#x9020;&#x8005;&#x6A21;&#x5F0F;&#x539F;&#x7406;&#x7C7B;&#x56FE;</h3>
+<p> <img src="img/QQ&#x622A;&#x56FE;20210204163046.png" alt="">
+ <img src="img/QQ&#x622A;&#x56FE;20210204164548.png" alt=""></p>
 
                                 
                                 </section>
@@ -990,8 +884,12 @@ Sheep{name=&apos;tom&apos;, age=1, color=&apos;&#x767D;&#x8272;&apos;}</p>
 
             
                 
+                <a href="55_建造者模式_盖房子.html" class="navigation navigation-prev " aria-label="Previous page: 盖房子">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="51_原型模式_Spring源码分析.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Spring源码分析">
+                
+                <a href="57_建造者模式_代码演示.html" class="navigation navigation-next " aria-label="Next page: 代码演示">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1002,7 +900,7 @@ Sheep{name=&apos;tom&apos;, age=1, color=&apos;&#x767D;&#x8272;&apos;}</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"克隆羊","level":"1.7.1","depth":2,"next":{"title":"Spring源码分析","level":"1.7.2","depth":2,"path":"51_原型模式_Spring源码分析.md","ref":"51_原型模式_Spring源码分析.md","articles":[]},"previous":{"title":"原型模式","level":"1.7","depth":1,"ref":"","articles":[{"title":"克隆羊","level":"1.7.1","depth":2,"path":"49_原型模式_克隆羊.md","ref":"49_原型模式_克隆羊.md","articles":[]},{"title":"Spring源码分析","level":"1.7.2","depth":2,"path":"51_原型模式_Spring源码分析.md","ref":"51_原型模式_Spring源码分析.md","articles":[]},{"title":"浅拷贝","level":"1.7.3","depth":2,"path":"52_原型模式_浅拷贝.md","ref":"52_原型模式_浅拷贝.md","articles":[]},{"title":"深拷贝","level":"1.7.4","depth":2,"path":"54_原型模式_深拷贝.md","ref":"54_原型模式_深拷贝.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"49_原型模式_克隆羊.md","mtime":"2021-02-04T05:12:48.854Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-05T00:24:47.493Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4个角色","level":"1.8.2","depth":2,"next":{"title":"代码演示","level":"1.8.3","depth":2,"path":"57_建造者模式_代码演示.md","ref":"57_建造者模式_代码演示.md","articles":[]},"previous":{"title":"盖房子","level":"1.8.1","depth":2,"path":"55_建造者模式_盖房子.md","ref":"55_建造者模式_盖房子.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"56_建造者模式_4个角色.md","mtime":"2021-02-05T00:20:35.949Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-05T00:24:47.493Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
