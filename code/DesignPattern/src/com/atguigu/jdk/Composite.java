@@ -1,14 +1,3 @@
-# 组合模式在JDK集合的源码分析
-
-![](./img/QQ截图20210205222723.png)
-
-
-
-看一下类图
-
-![](./img/)
-
-```java
 package com.atguigu.jdk;
 
 import java.util.HashMap;
@@ -35,35 +24,3 @@ public class Composite {
         System.out.println(hashMap);
     }
 }
-
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-![](./img/meizi14.jpg)    
-
->https://www.tupianzj.com/meinv/20200315/206397_13.html
