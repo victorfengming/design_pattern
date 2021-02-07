@@ -2,7 +2,6 @@
   "plugins": [
     "chapter-fold",
     "expandable-chapters",
-    "anchor-navigation-ex",
     "favicon",
     "lightbox",
     "splitter",
