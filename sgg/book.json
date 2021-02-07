@@ -1,17 +1,19 @@
 {
   "plugins": [
-    "back-to-top-button",
     "chapter-fold",
     "expandable-chapters",
     "anchor-navigation-ex",
+    "favicon",
     "lightbox",
-    "splitter"
+    "splitter",
+    "-lunr",
+    "pageview-count",
+    "ancre-navigation"
   ],
   "pluginsConfig": {
-    "anchor-navigation-ex":{
-      "showLevel": false,
-      "showGoTop": false
+    "favicon": {
+      "shortcut": "./img/avator.png.icon.ico",
+      "bookmark": "./img/avator.png.icon.ico"
     }
   }
-
 }
