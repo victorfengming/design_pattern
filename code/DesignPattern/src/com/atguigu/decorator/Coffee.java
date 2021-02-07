@@ -4,6 +4,6 @@ package com.atguigu.decorator;
 public class Coffee extends Drink{
     @Override
     public float cost() {
-        return 0;
+        return getPrice();
     }
 }

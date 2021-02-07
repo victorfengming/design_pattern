@@ -1,0 +1,1303 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>JDK源码 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="74_装饰者模式_代码实战.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    前言
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="01_设计抹水泥面试题.html">
+            
+                <a href="01_设计抹水泥面试题.html">
+            
+                    
+                    设计模式面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="03_何时会用到设计模式.html">
+            
+                <a href="03_何时会用到设计模式.html">
+            
+                    
+                    何时会用到设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="04_授课方式.html">
+            
+                <a href="04_授课方式.html">
+            
+                    
+                    授课方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    七大设计原则
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="05_七大原则.html">
+            
+                <a href="05_七大原则.html">
+            
+                    
+                    七大原则概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="06_单一职责原则.html">
+            
+                <a href="06_单一职责原则.html">
+            
+                    
+                    单一职责原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="08_接口隔离原则.html">
+            
+                <a href="08_接口隔离原则.html">
+            
+                    
+                    接口隔离原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="11_依赖倒转原则.html">
+            
+                <a href="11_依赖倒转原则.html">
+            
+                    
+                    依赖倒转原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="14_里氏替换原则.html">
+            
+                <a href="14_里氏替换原则.html">
+            
+                    
+                    里氏替换原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="16_开闭原则.html">
+            
+                <a href="16_开闭原则.html">
+            
+                    
+                    OCP开闭原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="19_迪米特法则.html">
+            
+                <a href="19_迪米特法则.html">
+            
+                    
+                    迪米特法则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="22_合成复用原则.html">
+            
+                <a href="22_合成复用原则.html">
+            
+                    
+                    合成复用原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="23_UML相关.html">
+            
+                <a href="23_UML相关.html">
+            
+                    
+                    UML相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="25_类的依赖泛化_依赖关系.html">
+            
+                <a href="25_类的依赖泛化_依赖关系.html">
+            
+                    
+                    类的依赖泛化_依赖关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="26_设计模式扩展.html">
+            
+                <a href="26_设计模式扩展.html">
+            
+                    
+                    设计模式扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    单例
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="29_单例_饿汉_静态常量.html">
+            
+                <a href="29_单例_饿汉_静态常量.html">
+            
+                    
+                    饿汉_静态常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="30_单例_饿汉_静态代码块儿.html">
+            
+                <a href="30_单例_饿汉_静态代码块儿.html">
+            
+                    
+                    饿汉_静态代码块儿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="31_单例_线程不安全_懒汉式.html">
+            
+                <a href="31_单例_线程不安全_懒汉式.html">
+            
+                    
+                    线程不安全_懒汉式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="32_单例_线程安全_懒汉式.html">
+            
+                <a href="32_单例_线程安全_懒汉式.html">
+            
+                    
+                    线程安全_懒汉式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="33_单例_同步代码块_懒汉式.html">
+            
+                <a href="33_单例_同步代码块_懒汉式.html">
+            
+                    
+                    同步代码块_懒汉式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="34_单例_双重检查.html">
+            
+                <a href="34_单例_双重检查.html">
+            
+                    
+                    双重检查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="35_单例_静态内部类.html">
+            
+                <a href="35_单例_静态内部类.html">
+            
+                    
+                    静态内部类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="36_单例_枚举.html">
+            
+                <a href="36_单例_枚举.html">
+            
+                    
+                    枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="37_单例_JDK源码.html">
+            
+                <a href="37_单例_JDK源码.html">
+            
+                    
+                    JDK源码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="38_单例_小结.html">
+            
+                <a href="38_单例_小结.html">
+            
+                    
+                    小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    工厂模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="39_工厂模式_简单工厂模式.html">
+            
+                <a href="39_工厂模式_简单工厂模式.html">
+            
+                    
+                    简单工厂模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="43_工厂模式_工厂方法模式.html">
+            
+                <a href="43_工厂模式_工厂方法模式.html">
+            
+                    
+                    工厂方法模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="45_工厂模式_抽象工厂模式.html">
+            
+                <a href="45_工厂模式_抽象工厂模式.html">
+            
+                    
+                    抽象工厂模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="46_工厂模式_JDK源码分析.html">
+            
+                <a href="46_工厂模式_JDK源码分析.html">
+            
+                    
+                    JDK源码分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    原型模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="49_原型模式_克隆羊.html">
+            
+                <a href="49_原型模式_克隆羊.html">
+            
+                    
+                    克隆羊
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="51_原型模式_Spring源码分析.html">
+            
+                <a href="51_原型模式_Spring源码分析.html">
+            
+                    
+                    Spring源码分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="52_原型模式_浅拷贝.html">
+            
+                <a href="52_原型模式_浅拷贝.html">
+            
+                    
+                    浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="54_原型模式_深拷贝.html">
+            
+                <a href="54_原型模式_深拷贝.html">
+            
+                    
+                    深拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    建造者模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="55_建造者模式_盖房子.html">
+            
+                <a href="55_建造者模式_盖房子.html">
+            
+                    
+                    盖房子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="56_建造者模式_4个角色.html">
+            
+                <a href="56_建造者模式_4个角色.html">
+            
+                    
+                    4个角色
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="57_建造者模式_代码演示.html">
+            
+                <a href="57_建造者模式_代码演示.html">
+            
+                    
+                    代码演示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="58_建造者模式_StringBuilder源码.html">
+            
+                <a href="58_建造者模式_StringBuilder源码.html">
+            
+                    
+                    StringBuilder源码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="59_建造者模式_小结.html">
+            
+                <a href="59_建造者模式_小结.html">
+            
+                    
+                    小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    适配器模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="60_适配器模式_工作原理.html">
+            
+                <a href="60_适配器模式_工作原理.html">
+            
+                    
+                    工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="61_类适配器_电压问题.html">
+            
+                <a href="61_类适配器_电压问题.html">
+            
+                    
+                    类适配器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="62_对象适配器_电压问题.html">
+            
+                <a href="62_对象适配器_电压问题.html">
+            
+                    
+                    对象适配器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="63_接口适配器_电压问题.html">
+            
+                <a href="63_接口适配器_电压问题.html">
+            
+                    
+                    接口适配器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="64_适配器模式_SpringMVC.html">
+            
+                <a href="64_适配器模式_SpringMVC.html">
+            
+                    
+                    源码应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    桥接模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="65_桥接模式_手机问题.html">
+            
+                <a href="65_桥接模式_手机问题.html">
+            
+                    
+                    手机问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="66_桥接模式_源码剖析.html">
+            
+                <a href="66_桥接模式_源码剖析.html">
+            
+                    
+                    源码剖析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="67_桥接模式_注意事项.html">
+            
+                <a href="67_桥接模式_注意事项.html">
+            
+                    
+                    注意事项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    装饰者模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="71_装饰者模式_起步.html">
+            
+                <a href="71_装饰者模式_起步.html">
+            
+                    
+                    起步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="74_装饰者模式_代码实战.html">
+            
+                <a href="74_装饰者模式_代码实战.html">
+            
+                    
+                    代码实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11.3" data-path="75_装饰着模式_JDK源码.html">
+            
+                <a href="75_装饰着模式_JDK源码.html">
+            
+                    
+                    JDK源码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    组合模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="77_组合模式_院校展示.html">
+            
+                <a href="77_组合模式_院校展示.html">
+            
+                    
+                    院校展示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="78_组合模式_JDK.html">
+            
+                <a href="78_组合模式_JDK.html">
+            
+                    
+                    JDK源码分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="79_组合模式_注意事项.html">
+            
+                <a href="79_组合模式_注意事项.html">
+            
+                    
+                    注意事项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                    外观模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="81_外观模式_影院管理.html">
+            
+                <a href="81_外观模式_影院管理.html">
+            
+                    
+                    影院管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="81_外观模式_影院管理.html">
+            
+                <a href="81_外观模式_影院管理.html">
+            
+                    
+                    影院管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >JDK源码</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x88C5;&#x6B7B;&#x8005;&#x6A21;&#x5F0F;&#x5728;jdk&#x5E94;&#x7528;&#x7684;&#x6E90;&#x7801;&#x5206;&#x6790;">&#x88C5;&#x6B7B;&#x8005;&#x6A21;&#x5F0F;&#x5728;JDK&#x5E94;&#x7528;&#x7684;&#x6E90;&#x7801;&#x5206;&#x6790;</h1>
+<p><img src="img/QQ&#x622A;&#x56FE;20210205185147.png" alt="">
+<img src="img/QQ&#x622A;&#x56FE;20210205185458.png" alt=""></p>
+<h3 id="&#x76F4;&#x63A5;&#x4E0A;&#x4EE3;&#x7801;">&#x76F4;&#x63A5;&#x4E0A;&#x4EE3;&#x7801;</h3>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.jdk;
+
+
+<span class="hljs-keyword">import</span> java.io.DataInputStream;
+<span class="hljs-keyword">import</span> java.io.FileInputStream;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Decorator</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception</span>{
+        DataInputStream dis = <span class="hljs-keyword">new</span> DataInputStream(
+                <span class="hljs-keyword">new</span> FileInputStream(<span class="hljs-string">&quot;E:\\Projects\\IdeaProjects\\design_pattern\\out\\demo.txt&quot;</span>)
+        );
+        <span class="hljs-comment">/*
+        demo.txt &#x6587;&#x4EF6;&#x5185;&#x5BB9;:
+        o
+        * */</span>
+        System.out.println(dis.read());
+        dis.close();
+        <span class="hljs-comment">/*
+        111
+        * */</span>
+    }
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-comment">/**
+ * A &lt;code&gt;FileInputStream&lt;/code&gt; obtains input bytes
+ * from a file in a file system. What files
+ * are  available depends on the host environment.
+ *
+ * &lt;p&gt;&lt;code&gt;FileInputStream&lt;/code&gt; is meant for reading streams of raw bytes
+ * such as image data. For reading streams of characters, consider using
+ * &lt;code&gt;FileReader&lt;/code&gt;.
+ *
+ * <span class="hljs-doctag">@author</span>  Arthur van Hoff
+ * <span class="hljs-doctag">@see</span>     java.io.File
+ * <span class="hljs-doctag">@see</span>     java.io.FileDescriptor
+ * <span class="hljs-doctag">@see</span>     java.io.FileOutputStream
+ * <span class="hljs-doctag">@see</span>     java.nio.file.Files#newInputStream
+ * <span class="hljs-doctag">@since</span>   JDK1.0
+ */</span>
+<span class="hljs-keyword">public</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileInputStream</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">InputStream</span>
+</span>{
+    <span class="hljs-comment">/* File Descriptor - handle to the open file */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> FileDescriptor fd;
+
+    <span class="hljs-comment">/**
+     * The path of the referenced file
+     * (null if the stream is created with a file descriptor)
+     */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> String path;
+
+    <span class="hljs-keyword">private</span> FileChannel channel = <span class="hljs-keyword">null</span>;
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Object closeLock = <span class="hljs-keyword">new</span> Object();
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">volatile</span> <span class="hljs-keyword">boolean</span> closed = <span class="hljs-keyword">false</span>;
+</code></pre>
+<p>InputStream&#x662F;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x7684;</p>
+<pre><code class="lang-java"><span class="hljs-comment">/**
+ * This abstract class is the superclass of all classes representing
+ * an input stream of bytes.
+ *
+ * &lt;p&gt; Applications that need to define a subclass of &lt;code&gt;InputStream&lt;/code&gt;
+ * must always provide a method that returns the next byte of input.
+ *
+ * <span class="hljs-doctag">@author</span>  Arthur van Hoff
+ * <span class="hljs-doctag">@see</span>     java.io.BufferedInputStream
+ * <span class="hljs-doctag">@see</span>     java.io.ByteArrayInputStream
+ * <span class="hljs-doctag">@see</span>     java.io.DataInputStream
+ * <span class="hljs-doctag">@see</span>     java.io.FilterInputStream
+ * <span class="hljs-doctag">@see</span>     java.io.InputStream#read()
+ * <span class="hljs-doctag">@see</span>     java.io.OutputStream
+ * <span class="hljs-doctag">@see</span>     java.io.PushbackInputStream
+ * <span class="hljs-doctag">@since</span>   JDK1.0
+ */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">InputStream</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Closeable</span> </span>{
+
+    <span class="hljs-comment">// MAX_SKIP_BUFFER_SIZE is used to determine the maximum buffer size to</span>
+    <span class="hljs-comment">// use when skipping.</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> MAX_SKIP_BUFFER_SIZE = <span class="hljs-number">2048</span>;
+
+    <span class="hljs-comment">/**
+     * Reads the next byte of data from the input stream. The value byte is
+     * returned as an &lt;code&gt;int&lt;/code&gt; in the range &lt;code&gt;0&lt;/code&gt; to
+     * &lt;code&gt;255&lt;/code&gt;. If no byte is available because the end of the stream
+     * has been reached, the value &lt;code&gt;-1&lt;/code&gt; is returned. This method
+     * blocks until input data is available, the end of the stream is detected,
+     * or an exception is thrown.
+     *
+     * &lt;p&gt; A subclass must provide an implementation of this method.
+     *
+     * <span class="hljs-doctag">@return</span>     the next byte of data, or &lt;code&gt;-1&lt;/code&gt; if the end of the
+     *             stream is reached.
+     * <span class="hljs-doctag">@exception</span>  IOException  if an I/O error occurs.
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException</span>;
+</code></pre>
+<pre><code class="lang-java">
+<span class="hljs-comment">/**
+ * A &lt;code&gt;FilterInputStream&lt;/code&gt; contains
+ * some other input stream, which it uses as
+ * its  basic source of data, possibly transforming
+ * the data along the way or providing  additional
+ * functionality. The class &lt;code&gt;FilterInputStream&lt;/code&gt;
+ * itself simply overrides all  methods of
+ * &lt;code&gt;InputStream&lt;/code&gt; with versions that
+ * pass all requests to the contained  input
+ * stream. Subclasses of &lt;code&gt;FilterInputStream&lt;/code&gt;
+ * may further override some of  these methods
+ * and may also provide additional methods
+ * and fields.
+ *
+ * <span class="hljs-doctag">@author</span>  Jonathan Payne
+ * <span class="hljs-doctag">@since</span>   JDK1.0
+ */</span>
+<span class="hljs-keyword">public</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FilterInputStream</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">InputStream</span> </span>{
+    <span class="hljs-comment">/**
+     * The input stream to be filtered.
+     */</span>
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">volatile</span> InputStream in;
+
+    <span class="hljs-comment">/**
+     * Creates a &lt;code&gt;FilterInputStream&lt;/code&gt;
+     * by assigning the  argument &lt;code&gt;in&lt;/code&gt;
+     * to the field &lt;code&gt;this.in&lt;/code&gt; so as
+     * to remember it for later use.
+     *
+     * <span class="hljs-doctag">@param</span>   in   the underlying input stream, or &lt;code&gt;null&lt;/code&gt; if
+     *          this instance is to be created without an underlying stream.
+     */</span>
+</code></pre>
+<h3 id="&#x6572;&#x9ED1;&#x677F;">&#x6572;&#x9ED1;&#x677F;</h3>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.jdk;
+
+
+<span class="hljs-keyword">import</span> java.io.DataInputStream;
+<span class="hljs-keyword">import</span> java.io.FileInputStream;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Decorator</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception</span>{
+        <span class="hljs-comment">// &#x8BF4;&#x660E;</span>
+        <span class="hljs-comment">// 1. InputStream &#x662F;&#x62BD;&#x8C61;&#x7C7B;,&#x7C7B;&#x4F3C;&#x6211;&#x4EEC;&#x524D;&#x9762;&#x7684;Drink</span>
+        <span class="hljs-comment">// 2. FileInputStream &#x662F; InputStream &#x5B50;&#x7C7B;,&#x7C7B;&#x4F3C;&#x6211;&#x4EEC;&#x524D;&#x9762;&#x7684;DeCaf, LongBlack</span>
+        <span class="hljs-comment">// 3. FilterInputStream &#x662F; InputStream &#x5B50;&#x7C7B;: &#x7C7B;&#x4F3C;&#x6211;&#x4EEC;&#x5176;&#x90A3;&#x9762;&#x7684; Decorator &#x4FEE;&#x9970;&#x8005;</span>
+        <span class="hljs-comment">// 4. DataInputStream &#x662F; FilterInputStream&#x5B50;&#x7C7B;, &#x5177;&#x4F53;&#x7684;&#x4FEE;&#x9970;&#x8005;,&#x7C7B;&#x4F3C;&#x5176;&#x90A3;&#x9762;&#x7684; Milk,Soy &#x7B49;</span>
+        <span class="hljs-comment">// 5. FilterInputStream &#x7C7B; &#x6709; protected volatile InputStream in; &#x5373;&#x542B;&#x88AB;&#x88C5;&#x9970;&#x8005;</span>
+        <span class="hljs-comment">// 6. &#x5206;&#x6790;&#x5F97;&#x51FA;: &#x5728;jdk&#x7684;IO&#x4F53;&#x7CFB;&#x4E2D;,&#x5C31;&#x662F;&#x4F7F;&#x7528;&#x88C5;&#x9970;&#x8005;&#x6A21;&#x5F0F;</span>
+        DataInputStream dis = <span class="hljs-keyword">new</span> DataInputStream(
+            <span class="hljs-keyword">new</span> FileInputStream(<span class="hljs-string">&quot;E:\\Projects\\IdeaProjects\\design_pattern\\out\\demo.txt&quot;</span>)
+        );
+        System.out.println(dis.read());
+        dis.close();
+
+    }
+}
+</code></pre>
+<h3 id="&#x4E00;&#x53E5;&#x8BDD;">&#x4E00;&#x53E5;&#x8BDD;</h3>
+<p>&#x88C5;&#x9970;&#x8005;&#x6A21;&#x5F0F;: <strong><em>&#x52A8;&#x6001;&#x7684;&#x5C06;&#x65B0;&#x529F;&#x80FD;&#x9644;&#x52A0;&#x5230;&#x5BF9;&#x8C61;&#x4E0A;</em></strong></p>
+<p><img src="img/mm/meizi12.jpg" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="74_装饰者模式_代码实战.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 代码实战">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"JDK源码","level":"1.11.3","depth":2,"next":{"title":"组合模式","level":"1.12","depth":1,"ref":"","articles":[{"title":"院校展示","level":"1.12.1","depth":2,"path":"77_组合模式_院校展示.md","ref":"77_组合模式_院校展示.md","articles":[]},{"title":"JDK源码分析","level":"1.12.2","depth":2,"path":"78_组合模式_JDK.md","ref":"78_组合模式_JDK.md","articles":[]},{"title":"注意事项","level":"1.12.3","depth":2,"path":"79_组合模式_注意事项.md","ref":"79_组合模式_注意事项.md","articles":[]}]},"previous":{"title":"代码实战","level":"1.11.2","depth":2,"path":"74_装饰者模式_代码实战.md","ref":"74_装饰者模式_代码实战.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"75_装饰着模式_JDK源码.md","mtime":"2021-02-06T14:16:15.115Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-06T14:34:39.747Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
