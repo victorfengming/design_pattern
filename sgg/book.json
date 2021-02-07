@@ -1,0 +1,16 @@
+{
+  "plugins": [
+    "back-to-top-button",
+    "chapter-fold",
+    "expandable-chapters",
+    "anchor-navigation-ex",
+    "lightbox",
+    "splitter"
+  ],
+  "pluginsConfig": {
+    "anchor-navigation-ex":{
+      "showLevel": false,
+      "showGoTop": false
+    }
+  }
+}
