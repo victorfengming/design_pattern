@@ -17,10 +17,6 @@
     
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
                 
             
@@ -29,15 +25,19 @@
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
                 
             
                 
                 <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
                 
             
                 
@@ -73,6 +73,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -83,6 +84,15 @@
     
     
     <link rel="prev" href="83_外观模式_源码分析.html" />
+    
+
+    
+        <link rel="shortcut icon" href='img/avator.png.icon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='img/avator.png.icon.ico' type="image/x-icon">
+    
+    
     
 
     </head>
@@ -2152,7 +2162,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x5916;&#x89C2;&#x6A21;&#x5F0F;&#x7684;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#x548C;&#x7EC6;&#x8282;"><b></b>&#x5916;&#x89C2;&#x6A21;&#x5F0F;&#x7684;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#x548C;&#x7EC6;&#x8282;</a></li><li><span class="title-icon "></span><a href="#&#x4E00;&#x53E5;&#x8BDD;"><b></b>&#x4E00;&#x53E5;&#x8BDD;</a></li></ul></ul></div><h2 id="&#x5916;&#x89C2;&#x6A21;&#x5F0F;&#x7684;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#x548C;&#x7EC6;&#x8282;"><a name="&#x5916;&#x89C2;&#x6A21;&#x5F0F;&#x7684;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#x548C;&#x7EC6;&#x8282;" class="anchor-navigation-ex-anchor" href="#&#x5916;&#x89C2;&#x6A21;&#x5F0F;&#x7684;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#x548C;&#x7EC6;&#x8282;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5916;&#x89C2;&#x6A21;&#x5F0F;&#x7684;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#x548C;&#x7EC6;&#x8282;</h2>
+                                <html><head></head><body><h2 id="&#x5916;&#x89C2;&#x6A21;&#x5F0F;&#x7684;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#x548C;&#x7EC6;&#x8282;"><a name="&#x5916;&#x89C2;&#x6A21;&#x5F0F;&#x7684;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#x548C;&#x7EC6;&#x8282;" class="anchor-navigation-ex-anchor" href="#&#x5916;&#x89C2;&#x6A21;&#x5F0F;&#x7684;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#x548C;&#x7EC6;&#x8282;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5916;&#x89C2;&#x6A21;&#x5F0F;&#x7684;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#x548C;&#x7EC6;&#x8282;</h2>
 <ol>
 <li>&#x5916;&#x89C2;&#x6A21;&#x5F0F;&#x5BF9;&#x5B8C;&#x5C4F;&#x853D;&#x4E86;&#x5B50;&#x7CFB;&#x7EDF;&#x7684;&#x7EC6;&#x8282;,&#x4E00;&#x6B21;&#x5916;&#x89C2;&#x6A21;&#x5F0F;&#x964D;&#x4F4E;&#x4E86;&#x5BA2;&#x6237;&#x7AEF;&#x5BF9;&#x5B50;&#x7CFB;&#x7EDF;&#x4F7F;&#x7528;&#x7684;&#x590D;&#x6742;&#x6027;</li>
 <li>&#x5916;&#x89C2;&#x6A21;&#x5F0F;&#x5BF9;&#x5BA2;&#x6237;&#x7AEF;&#x4E0E;&#x5B50;&#x7CFB;&#x7EDF;&#x7684;&#x8026;&#x5408;&#x5173;&#x7CFB;,&#x8BA9;&#x5B50;&#x7CFB;&#x7EDF;&#x5185;&#x90E8;&#x7684;&#x6A21;&#x5757;&#x66F4;&#x6613;&#x7EF4;&#x62A4;&#x548C;&#x6269;&#x5C55;</li>
@@ -2163,8 +2173,8 @@
 </ol>
 <h2 id="&#x4E00;&#x53E5;&#x8BDD;"><a name="&#x4E00;&#x53E5;&#x8BDD;" class="anchor-navigation-ex-anchor" href="#&#x4E00;&#x53E5;&#x8BDD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x53E5;&#x8BDD;</h2>
 <p>&#x5C31;&#x662F;&#x518D;&#x5C01;&#x88C5;&#x4E00;&#x5C42;</p>
-<p><a href="img/mm/meizi33.jpg" data-lightbox="dd81c4b7-5c9b-4ff8-b3c9-d9b263ff80b5" data-title=""><img src="img/mm/meizi33.jpg" alt=""></a></p>
-
+<p><a href="img/mm/meizi33.jpg" data-lightbox="dafa3d0f-997e-4d9a-a80d-281e366f1421" data-title=""><img src="img/mm/meizi33.jpg" alt=""></a></p>
+</body></html>
                                 
                                 </section>
                             
@@ -2203,7 +2213,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"注意事项","level":"1.13.4","depth":2,"next":{"title":"享元模式","level":"1.14","depth":1,"ref":"","articles":[{"title":"网站外包","level":"1.14.1","depth":2,"path":"86_享元模式_网站外包.md","ref":"./86_享元模式_网站外包.md","articles":[]},{"title":"工作原理","level":"1.14.2","depth":2,"path":"87_享元模式_工作原理.md","ref":"./87_享元模式_工作原理.md","articles":[]},{"title":"代码实战","level":"1.14.3","depth":2,"path":"88_享元模式_代码实战.md","ref":"./88_享元模式_代码实战.md","articles":[]},{"title":"源码分析","level":"1.14.4","depth":2,"path":"89_享元模式_源码分析.md","ref":"./89_享元模式_源码分析.md","articles":[]},{"title":"内容梳理","level":"1.14.5","depth":2,"path":"90_享元模式_内容梳理.md","ref":"./90_享元模式_内容梳理.md","articles":[]}]},"previous":{"title":"源码分析","level":"1.13.3","depth":2,"path":"83_外观模式_源码分析.md","ref":"./83_外观模式_源码分析.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","chapter-fold","expandable-chapters","anchor-navigation-ex","lightbox","splitter"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":false,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"84_外观模式_注意事项.md","mtime":"2021-02-07T09:45:45.428Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-07T13:57:55.085Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"注意事项","level":"1.13.4","depth":2,"next":{"title":"享元模式","level":"1.14","depth":1,"ref":"","articles":[{"title":"网站外包","level":"1.14.1","depth":2,"path":"86_享元模式_网站外包.md","ref":"./86_享元模式_网站外包.md","articles":[]},{"title":"工作原理","level":"1.14.2","depth":2,"path":"87_享元模式_工作原理.md","ref":"./87_享元模式_工作原理.md","articles":[]},{"title":"代码实战","level":"1.14.3","depth":2,"path":"88_享元模式_代码实战.md","ref":"./88_享元模式_代码实战.md","articles":[]},{"title":"源码分析","level":"1.14.4","depth":2,"path":"89_享元模式_源码分析.md","ref":"./89_享元模式_源码分析.md","articles":[]},{"title":"内容梳理","level":"1.14.5","depth":2,"path":"90_享元模式_内容梳理.md","ref":"./90_享元模式_内容梳理.md","articles":[]}]},"previous":{"title":"源码分析","level":"1.13.3","depth":2,"path":"83_外观模式_源码分析.md","ref":"./83_外观模式_源码分析.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"84_外观模式_注意事项.md","mtime":"2021-02-07T09:45:45.428Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-07T14:27:08.470Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -2211,10 +2221,6 @@
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
-    
-        
-        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
     
         
         <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
@@ -2233,19 +2239,15 @@
         
     
         
+        <script src="gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
         
     
         
         <script src="gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
         
     
         
