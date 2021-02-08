@@ -13,7 +13,6 @@ import java.util.List;
 public class OutputImpl {
     // 吧学院的集合拿到
     List<College> collegesList;
-
     //
 
     public OutputImpl(List<College> collegesList) {
@@ -26,6 +25,14 @@ public class OutputImpl {
         // 直接用迭代器取
         // 官方Java中的List已经实现了Iterator接口
         Iterator<College> iterator = collegesList.iterator();
+        // 循环
+        while (iterator.hasNext()) {
+            // 取出一个学院
+            College college = iterator.next();
+            System.out.println("---------"+college.getName()+"---------");
+            // 得到对应的迭代器
+            printDepartment(college.createIterator());
+        }
     }
 
     // 输出 学院 输出系
@@ -38,3 +45,5 @@ public class OutputImpl {
     }
 
 }
+
+
