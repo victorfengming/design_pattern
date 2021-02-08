@@ -2164,9 +2164,137 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x4EE3;&#x7406;"><a name="&#x4EE3;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EE3;&#x7406;</h2>
-<p> <a href="img/mm/meizi30.jpg" data-lightbox="b4a325cf-0ea4-477f-9d55-cd5cd1185614" data-title=""><img src="img/mm/meizi30.jpg" alt=""></a></p>
+                                <html><head></head><body><h2 id="&#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;id&#x94A9;&#x5B50;&#x65B9;&#x6CD5;"><a name="&#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;id&#x94A9;&#x5B50;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;id&#x94A9;&#x5B50;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;id&#x94A9;&#x5B50;&#x65B9;&#x6CD5;</h2>
+<ol>
+<li>&#x5728;&#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;&#x7684;&#x7236;&#x7C7B;&#x4E2D;,&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;,&#x5B83;&#x9ED8;&#x8BA4;&#x4E0D;&#x505A;&#x4EFB;&#x4F55;&#x4E8B;,&#x5B50;&#x7C7B;&#x53EF;&#x4EE5;&#x89C6;&#x60C5;&#x51B5;&#x8981;&#x4E0D;&#x8981;&#x8986;&#x76D6;&#x5B83;,&#x8BE5;&#x65B9;&#x6CD5;&#x79F0;&#x4E3A;&quot;&#x94A9;&#x5B50;&quot;</li>
+<li>&#x8FD8;&#x662F;&#x7528;&#x4E0A;&#x9762;&#x505A;&#x8C46;&#x6D46;&#x7684;&#x4F8B;&#x5B50;&#x6765;&#x8BB2;&#x89E3;,&#x6BD4;&#x5982;,&#x6211;&#x4EEC;&#x8FD8;&#x5E0C;&#x671B;&#x5236;&#x4F5C;&#x7EAF;&#x8C46;&#x6D46;,&#x4E0D;&#x6DFB;&#x52A0;&#x4EFB;&#x4F55;&#x7684;&#x914D;&#x6599;,&#x8BF7;&#x4F7F;&#x7528;&#x94A9;&#x5B50;&#x65B9;&#x6CD5;&#x5BF9;&#x5176;&#x90A3;&#x9762;&#x7684;&#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x6539;&#x9020;</li>
+</ol>
+<h3 id="&#x4EE3;&#x7801;&#x6539;&#x8FDB;"><a name="&#x4EE3;&#x7801;&#x6539;&#x8FDB;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;&#x6539;&#x8FDB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EE3;&#x7801;&#x6539;&#x8FDB;</h3>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.template.improve;
 
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SoyaMilk</span> </span>{
+    <span class="hljs-comment">//    &#x6A21;&#x677F;&#x65B9;&#x6CD5;,make,&#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x505A;&#x6210;final,&#x4E0D;&#x8BA9;&#x5B50;&#x7C7B;&#x53BB;&#x8986;&#x76D6;</span>
+    <span class="hljs-function"><span class="hljs-keyword">final</span> <span class="hljs-keyword">void</span> <span class="hljs-title">make</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// &#x7B2C;&#x4E00;&#x6B65;</span>
+        select();
+        <span class="hljs-keyword">if</span> (customerWantCondiments()) {
+            addCondiments();
+        }
+        soak();
+        beat();
+    }
+
+    <span class="hljs-comment">// &#x9009;&#x6750;&#x6599;</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">select</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;&#x7B2C;&#x4E00;&#x6B65;: &#x9009;&#x62E9;&#x597D;&#x7684;&#x65B0;&#x9C9C;&#x9EC4;&#x8C46;&quot;</span>);
+    }
+
+    <span class="hljs-comment">// &#x6DFB;&#x52A0;&#x4E0D;&#x540C;&#x7684;&#x914D;&#x6599;,&#x62BD;&#x8C61;&#x65B9;&#x6CD5;,&#x5B50;&#x7C7B;&#x5177;&#x4F53;&#x5B9E;&#x73B0;</span>
+    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addCondiments</span><span class="hljs-params">()</span></span>;
+
+    <span class="hljs-comment">// &#x6D78;&#x6CE1;</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">soak</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;&#x7B2C;&#x4E09;&#x90E8;,&#x9EC4;&#x8C46;&#x548C;&#x914D;&#x6599;&#x5F00;&#x59CB;&#x6D78;&#x6CE1;,&#x9700;&#x8981;3&#x5C0F;&#x65F6;&quot;</span>);
+    }
+
+    <span class="hljs-comment">//</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">beat</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;&#x7B2C;&#x56DB;&#x90E8;,&#x9EC4;&#x8C46;&#x548C;&#x914D;&#x6599;&#x653E;&#x5230;&#x8C46;&#x6D46;&#x673A;&#x53BB;&#x6253;&#x788E;!&quot;</span>);
+    }
+
+    <span class="hljs-comment">// &#x94A9;&#x5B50;&#x65B9;&#x6CD5;,&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x6DFB;&#x52A0;&#x914D;&#x6599;</span>
+    <span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">customerWantCondiments</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// &#x9ED8;&#x8BA4;&#x8FD4;&#x56DE;</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+    }
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.template.improve;
+
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PeanutSoyaMilk</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">SoyaMilk</span> </span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addCondiments</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;&#x7B2C;&#x4E8C;&#x6B65; &#x52A0;&#x5165;&#x4E0A;&#x53F7;&#x7684;&#x82B1;&#x751F;!&quot;</span>);
+    }
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.template.improve;
+
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RedBeanSoyaMilk</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">SoyaMilk</span> </span>{
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addCondiments</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;&#x7B2C;&#x4E8C;&#x6B65; &#x52A0;&#x5165;&#x4E0A;&#x53F7;&#x7684;&#x7EA2;&#x8C46;&quot;</span>);
+    }
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x52A0;&#x4E0A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.template.improve;
+
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PureSoyaMilk</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">SoyaMilk</span></span>{
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addCondiments</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// &#x7A7A;&#x5B9E;&#x73B0;</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">customerWantCondiments</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// &#x91CD;&#x5199;&#x8FD9;&#x4E2A;&#x5730;&#x65B9;</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+    }
+}
+</code></pre>
+<p>&#x5BA2;&#x6237;&#x7AEF;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.template.improve;
+
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Client</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;---------&quot;</span>);
+        <span class="hljs-comment">// &#x5236;&#x4F5C;&#x7EA2;&#x8C46;&#x8C46;&#x6D46;</span>
+        System.out.println(<span class="hljs-string">&quot;----&#x5236;&#x4F5C;&#x7EA2;&#x8C46;&#x8C46;&#x6D46;----&quot;</span>);
+        SoyaMilk redBeanSoyaMilk = <span class="hljs-keyword">new</span> RedBeanSoyaMilk();
+        redBeanSoyaMilk.make();
+
+        System.out.println(<span class="hljs-string">&quot;----&#x5236;&#x4F5C;&#x82B1;&#x751F;&#x8C46;&#x6D46;----&quot;</span>);
+        SoyaMilk peanutSoyMilk = <span class="hljs-keyword">new</span> PeanutSoyaMilk();
+        peanutSoyMilk.make();
+
+        System.out.println(<span class="hljs-string">&quot;----&#x5236;&#x4F5C;&#x7EAF;&#x8C46;&#x6D46;----&quot;</span>);
+        SoyaMilk pureSoyMilk = <span class="hljs-keyword">new</span> PureSoyaMilk();
+        pureSoyMilk.make();
+
+        <span class="hljs-comment">/**
+         * ---------
+         * ----&#x5236;&#x4F5C;&#x7EA2;&#x8C46;&#x8C46;&#x6D46;----
+         * &#x7B2C;&#x4E00;&#x6B65;: &#x9009;&#x62E9;&#x597D;&#x7684;&#x65B0;&#x9C9C;&#x9EC4;&#x8C46;
+         * &#x7B2C;&#x4E8C;&#x6B65; &#x52A0;&#x5165;&#x4E0A;&#x53F7;&#x7684;&#x7EA2;&#x8C46;
+         * &#x7B2C;&#x4E09;&#x90E8;,&#x9EC4;&#x8C46;&#x548C;&#x914D;&#x6599;&#x5F00;&#x59CB;&#x6D78;&#x6CE1;,&#x9700;&#x8981;3&#x5C0F;&#x65F6;
+         * &#x7B2C;&#x56DB;&#x90E8;,&#x9EC4;&#x8C46;&#x548C;&#x914D;&#x6599;&#x653E;&#x5230;&#x8C46;&#x6D46;&#x673A;&#x53BB;&#x6253;&#x788E;!
+         * ----&#x5236;&#x4F5C;&#x82B1;&#x751F;&#x8C46;&#x6D46;----
+         * &#x7B2C;&#x4E00;&#x6B65;: &#x9009;&#x62E9;&#x597D;&#x7684;&#x65B0;&#x9C9C;&#x9EC4;&#x8C46;
+         * &#x7B2C;&#x4E8C;&#x6B65; &#x52A0;&#x5165;&#x4E0A;&#x53F7;&#x7684;&#x82B1;&#x751F;!
+         * &#x7B2C;&#x4E09;&#x90E8;,&#x9EC4;&#x8C46;&#x548C;&#x914D;&#x6599;&#x5F00;&#x59CB;&#x6D78;&#x6CE1;,&#x9700;&#x8981;3&#x5C0F;&#x65F6;
+         * &#x7B2C;&#x56DB;&#x90E8;,&#x9EC4;&#x8C46;&#x548C;&#x914D;&#x6599;&#x653E;&#x5230;&#x8C46;&#x6D46;&#x673A;&#x53BB;&#x6253;&#x788E;!
+         * ----&#x5236;&#x4F5C;&#x7EAF;&#x8C46;&#x6D46;----
+         * &#x7B2C;&#x4E00;&#x6B65;: &#x9009;&#x62E9;&#x597D;&#x7684;&#x65B0;&#x9C9C;&#x9EC4;&#x8C46;
+         * &#x7B2C;&#x4E09;&#x90E8;,&#x9EC4;&#x8C46;&#x548C;&#x914D;&#x6599;&#x5F00;&#x59CB;&#x6D78;&#x6CE1;,&#x9700;&#x8981;3&#x5C0F;&#x65F6;
+         * &#x7B2C;&#x56DB;&#x90E8;,&#x9EC4;&#x8C46;&#x548C;&#x914D;&#x6599;&#x653E;&#x5230;&#x8C46;&#x6D46;&#x673A;&#x53BB;&#x6253;&#x788E;!
+         *
+        * Process finished with exit code 0
+         */</span>
+    }
+}
+</code></pre>
+<blockquote>
+<p>&#x94A9;&#x5B50;&#x65B9;&#x6CD5;,&#x4ED6;&#x53EF;&#x4EE5;&#x8F7B;&#x677E;&#x7684;&#x5B9E;&#x73B0;,&#x54EA;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x5728;&#x4F60;&#x7684;&#x6A21;&#x677F;&#x4E2D;&#x8981;&#x4E0D;&#x8981;&#x8C03;&#x7528;</p>
+</blockquote>
+<p> <a href="img/mm/meizi30.jpg" data-lightbox="389a905a-5299-47f2-b721-dec532bd1097" data-title=""><img src="img/mm/meizi30.jpg" alt=""></a></p>
+</body></html>
                                 
                                 </section>
                             
@@ -2209,7 +2337,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"钩子方法","level":"1.16.3","depth":2,"next":{"title":"IOC源码","level":"1.16.4","depth":2,"path":"99_模板模式_IOC源码.md","ref":"./99_模板模式_IOC源码.md","articles":[]},"previous":{"title":"豆浆制作","level":"1.16.2","depth":2,"path":"97_模板模式_豆浆制作.md","ref":"./97_模板模式_豆浆制作.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"98_模板模式_钩子方法.md","mtime":"2021-02-08T03:06:22.363Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-08T03:10:53.017Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"钩子方法","level":"1.16.3","depth":2,"next":{"title":"IOC源码","level":"1.16.4","depth":2,"path":"99_模板模式_IOC源码.md","ref":"./99_模板模式_IOC源码.md","articles":[]},"previous":{"title":"豆浆制作","level":"1.16.2","depth":2,"path":"97_模板模式_豆浆制作.md","ref":"./97_模板模式_豆浆制作.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"98_模板模式_钩子方法.md","mtime":"2021-02-08T09:27:51.039Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-08T09:29:45.577Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

@@ -2164,9 +2164,345 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x4EE3;&#x7406;"><a name="&#x4EE3;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EE3;&#x7406;</h2>
-<p>  <a href="img/mm/meizi34.jpg" data-lightbox="0a814e81-0dfa-440c-91bb-f6914ee4b6f1" data-title=""><img src="img/mm/meizi34.jpg" alt=""></a></p>
+                                <html><head></head><body><h2 id="&#x547D;&#x4EE4;&#x6A21;&#x5F0F;&#x89E3;&#x51B3;&#x667A;&#x80FD;&#x751F;&#x6D3B;&#x9879;&#x76EE;"><a name="&#x547D;&#x4EE4;&#x6A21;&#x5F0F;&#x89E3;&#x51B3;&#x667A;&#x80FD;&#x751F;&#x6D3B;&#x9879;&#x76EE;" class="anchor-navigation-ex-anchor" href="#&#x547D;&#x4EE4;&#x6A21;&#x5F0F;&#x89E3;&#x51B3;&#x667A;&#x80FD;&#x751F;&#x6D3B;&#x9879;&#x76EE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x547D;&#x4EE4;&#x6A21;&#x5F0F;&#x89E3;&#x51B3;&#x667A;&#x80FD;&#x751F;&#x6D3B;&#x9879;&#x76EE;</h2>
+<p>&#x547D;&#x4EE4;&#x6A21;&#x5F0F;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;</p>
+<ol>
+<li>&#x5E94;&#x7528;&#x5B9E;&#x4F8B;&#x8981;&#x6C42;</li>
+</ol>
+<p>&#x7F16;&#x5199;&#x7A0B;&#x5E8F;,&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x6A21;&#x5F0F;, &#x5B8C;&#x6210;&#x5176;&#x90A3;&#x9762;&#x7684;&#x667A;&#x80FD;&#x5BB6;&#x7535;&#x9879;&#x76EE;</p>
+<p>&#x6211;&#x4EEC;&#x6709;&#x4E00;&#x4E2A;&#x7C7B;,&#x8FD9;&#x4E2A;&#x7C7B;&#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x4E2A;&#x9065;&#x63A7;&#x5668;,&#x6BCF;&#x4E2A;&#x6309;&#x94AE;&#x662F;&#x5206;&#x522B;&#x5BF9;&#x4E8E;&#x4E0D;&#x540C;&#x7684;&#x55EF;&#x7684;&#x5904;&#x7406;</p>
+<p> <a href="img/QQ&#x622A;&#x56FE;20210208150100.png" data-lightbox="689460f8-bf8b-468c-81fa-81a1838b0ceb" data-title=""><img src="img/QQ&#x622A;&#x56FE;20210208150100.png" alt=""></a></p>
+<h3 id="&#x7C7B;&#x56FE;"><a name="&#x7C7B;&#x56FE;" class="anchor-navigation-ex-anchor" href="#&#x7C7B;&#x56FE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7C7B;&#x56FE;</h3>
+<p> <a href="img/QQ&#x622A;&#x56FE;20210208153225.png" data-lightbox="f706e4df-af51-4e99-80ed-74cde1f12256" data-title=""><img src="img/QQ&#x622A;&#x56FE;20210208153225.png" alt=""></a></p>
+<p> &#x8FD8;&#x8981;&#x52A0;&#x4E00;&#x4E2A;&#x7A7A;&#x547D;&#x4EE4;,&#x7B80;&#x5316;&#x6211;&#x4EEC;&#x7684;&#x64CD;&#x4F5C;</p>
+<p> <a href="img/QQ&#x622A;&#x56FE;20210208153347.png" data-lightbox="41909418-f7a5-4436-af5e-9835e1be4bb3" data-title=""><img src="img/QQ&#x622A;&#x56FE;20210208153347.png" alt=""></a></p>
+<blockquote>
+<p>&#x73B0;&#x5728;&#x53EA;&#x662F;&#x6709;&#x7535;&#x706F;,&#x770B;&#x6211;&#x5199;&#x597D;&#x8FD9;&#x4E2A;&#x5728;&#x8FDB;&#x884C;&#x6269;&#x5C55;</p>
+</blockquote>
+<h3 id="&#x4EE3;&#x7801;&#x5B9E;&#x6218;"><a name="&#x4EE3;&#x7801;&#x5B9E;&#x6218;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;&#x5B9E;&#x6218;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EE3;&#x7801;&#x5B9E;&#x6218;</h3>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.command;
 
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Command</span> </span>{
+    <span class="hljs-comment">// &#x6267;&#x884C;&#x52A8;&#x4F5C;(&#x64CD;&#x4F5C;_)</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">execute</span><span class="hljs-params">()</span></span>;
+
+    <span class="hljs-comment">// &#x64A4;&#x9500;&#x52A8;&#x4F5C;(&#x64CD;&#x4F5C;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">undo</span><span class="hljs-params">()</span></span>;
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.command;
+
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LightReceiver</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">on</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;&#x7535;&#x706F;&#x6253;&#x5F00;&#x4E86;&quot;</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">off</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;&#x7535;&#x706F;&#x5173;&#x95ED;&#x4E86;&quot;</span>);
+    }
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.command;
+
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LightOnCommand</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Command</span> </span>{
+    <span class="hljs-comment">//&#x805A;&#x5408;LightReceiver</span>
+    LightReceiver light;
+
+    <span class="hljs-comment">//&#x6784;&#x9020;&#x5668;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">LightOnCommand</span><span class="hljs-params">(LightReceiver light)</span> </span>{
+        <span class="hljs-keyword">super</span>();
+        <span class="hljs-keyword">this</span>.light = light;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">execute</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// &#x4F60;&#x8BA4;&#x4E3A;&#x5B83;&#x662F;&#x6253;&#x5F00;</span>
+        <span class="hljs-comment">// &#x8C03;&#x7528;&#x63A5;&#x53D7;&#x8005;&#x7684;&#x65B9;&#x6CD5;</span>
+        light.on();
+
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">undo</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// &#x8C03;&#x7528;&#x63A5;&#x53D7;&#x8005;&#x7684;&#x65B9;&#x6CD5;</span>
+        light.off();
+    }
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.command;
+
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LightOffCommand</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Command</span> </span>{
+    LightReceiver light;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">LightOffCommand</span><span class="hljs-params">(LightReceiver light)</span> </span>{
+        <span class="hljs-keyword">super</span>();
+        <span class="hljs-keyword">this</span>.light = light;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">execute</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// &#x8C03;&#x7528;&#x63A5;&#x53D7;&#x8005;&#x65B9;&#x6CD5;</span>
+        light.off();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">undo</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// &#x8C03;&#x7528;&#x63A5;&#x53D7;&#x8005;&#x65B9;&#x6CD5;</span>
+        light.on();
+    }
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.command;
+
+<span class="hljs-comment">/**
+ * &#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x547D;&#x4EE4;,&#x5373;;&#x7A7A;&#x6267;&#x884C;,&#x521D;&#x59CB;&#x5316; &#x6BCF;&#x4E2A;&#x6309;&#x94AE;,
+ * &#x5F53;&#x8C03;&#x7528;&#x7A7A;&#x547D;&#x4EE4;&#x65F6;,&#x5BF9;&#x8C61;&#x4EC0;&#x4E48;&#x90FD;&#x4E0D;&#x505A;
+ * &#x5176;&#x5B9E;,&#x8FD9;&#x662F;&#x4E00;&#x79CD;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;,&#x53EF;&#x4EE5;&#x7701;&#x6389;&#x5BF9;&#x4E8E;&#x7A7A;&#x7684;&#x5224;&#x65AD;
+ */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NoCommand</span> </span>{
+
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.command;
+
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RemoteController</span> </span>{
+    <span class="hljs-comment">// &#x5F00;&#x6309;&#x94AE;&#x7684;&#x547D;&#x4EE4;&#x6570;&#x7EC4;</span>
+    Command[] onCommands;
+    Command[] offCommands;
+
+    <span class="hljs-comment">// &#x6267;&#x884C;&#x64A4;&#x9500;&#x547D;&#x4EE4;</span>
+    Command undoCommand;
+
+    <span class="hljs-comment">// &#x6784;&#x9020;&#x5668;,&#x521D;&#x59CB;&#x5316;&#x6309;&#x94AE;</span>
+
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">RemoteController</span><span class="hljs-params">()</span> </span>{
+        onCommands = <span class="hljs-keyword">new</span> Command[<span class="hljs-number">5</span>];
+        offCommands = <span class="hljs-keyword">new</span> Command[<span class="hljs-number">5</span>];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
+            onCommands[i] = <span class="hljs-keyword">new</span> NoCommand();
+            offCommands[i] = <span class="hljs-keyword">new</span> NoCommand();
+        }
+    }
+
+    <span class="hljs-comment">// &#x7ED9;&#x6211;&#x4EEC;&#x7684;&#x6309;&#x94AE;&#x8BBE;&#x7F6E;&#x4F60;&#x9700;&#x8981;&#x7684;&#x547D;&#x4EE4;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setCommand</span><span class="hljs-params">(<span class="hljs-keyword">int</span> no, Command onCommand, Command offCommand)</span> </span>{
+        onCommands[no] = onCommand;
+        offCommands[no] = offCommand;
+    }
+
+    <span class="hljs-comment">// &#x5B89;&#x4E0B;&#x5F00;&#x6309;&#x94AE;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onButtonWasPushed</span><span class="hljs-params">(<span class="hljs-keyword">int</span> no)</span> </span>{
+        <span class="hljs-comment">// &#x627E;&#x5230;&#x4F60;&#x6309;&#x4E0B;&#x7684;&#x5F00;&#x7684;&#x6309;&#x94AE;,&#x5E76;&#x8C03;&#x7528;&#x5BF9;&#x5E94;&#x7684;&#x65B9;&#x6CD5;</span>
+        onCommands[no].execute();
+        <span class="hljs-comment">// &#x8BB0;&#x5F55;&#x4F60;&#x8FD9;&#x6B21;&#x7684;&#x64CD;&#x4F5C;,&#x7528;&#x4E8E;&#x64A4;&#x9500;</span>
+        undoCommand = onCommands[no];
+    }
+
+    <span class="hljs-comment">// &#x5B89;&#x4E0B;&#x5173;&#x6309;&#x94AE;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">offButtonWasPushed</span><span class="hljs-params">(<span class="hljs-keyword">int</span> no)</span> </span>{
+        <span class="hljs-comment">// &#x627E;&#x5230;&#x4F60;&#x6309;&#x4E0B;&#x7684;&#x5F00;&#x7684;&#x6309;&#x94AE;,&#x5E76;&#x8C03;&#x7528;&#x5BF9;&#x5E94;&#x7684;&#x65B9;&#x6CD5;</span>
+        offCommands[no].execute();
+        <span class="hljs-comment">// &#x8BB0;&#x5F55;&#x4F60;&#x8FD9;&#x6B21;&#x7684;&#x64CD;&#x4F5C;,&#x7528;&#x4E8E;&#x64A4;&#x9500;</span>
+        undoCommand = offCommands[no];
+    }
+
+    <span class="hljs-comment">// &#x6309;&#x4E0B;&#x64A4;&#x9500;&#x6309;&#x94AE;&#x5904;&#x7406;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">undoButtonWasPushed</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// &#x6267;&#x884C;&#x547D;&#x4EE4;</span>
+        undoCommand.undo();
+        <span class="hljs-comment">// &#x53EA;&#x80FD;&#x591F;&#x64A4;&#x9500;&#x4E00;&#x6B21;</span>
+        <span class="hljs-comment">// tood &#x8981;&#x662F;&#x4F60;&#x60F3;&#x8981;&#x64A4;&#x9500;&#x591A;&#x6B21;,&#x5C31; &#x4E0D;&#x80FD;&#x7528;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x6765;&#x5B58;&#x653E;&#x4E86;,&#x8981;&#x6269;&#x5C55;&#x6210;&#x6570;&#x7EC4;&#x5B58;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x55EF;</span>
+    }
+
+}
+</code></pre>
+<blockquote>
+<p>&#x8FD9;&#x4E0D;&#x5C31;&#x662F;&#x5427;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x8FDB;&#x53BB;&#x6267;&#x884C;&#x4E48;,&#x7136;&#x540E;&#x5728;&#x5F52;&#x62E2;&#x5F52;&#x62E2;</p>
+<p>&#x770B;&#x770B;&#x600E;&#x4E48;&#x6267;&#x884C;</p>
+<p>&#x4E07;&#x80FD;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;-&#x52A0;&#x4E00;&#x5C42;</p>
+<p>&#x6211;&#x628A;&#x4E00;&#x5806;&#x8981;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;,&#x6211;&#x5B58;&#x653E;&#x5728;&#x6570;&#x7EC4;&#x91CC;&#x9762;,&#x7136;&#x540E;&#x4F60;&#x8C03;&#x7528;&#x54EA;&#x4E2A;&#x6211;&#x62FF;&#x51FA;&#x6765;&#x54EA;&#x4E2A;</p>
+<p>&#x5C31;&#x662F;&#x8FD9;&#x4E48;&#x56DE;&#x4E8B;&#x513F;</p>
+<p>&#x9009;&#x62E9;&#x6027;&#x7684;&#x8C03;&#x7528;&#x67D0;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#x4E4B;&#x524D;&#x5B58;&#x7684;&#x65B9;&#x6CD5;,&#x7136;&#x540E;&#x65B9;&#x4FBF;&#x8C03;&#x7528;&#x64A4;&#x9500;</p>
+<p>&#x53EF;&#x4E5F;&#x5B9E;&#x73B0;</p>
+<p>&#x7528; go &#x6CA1;&#x6709;&#x8FD9;&#x4E48;&#x9EBB;&#x70E6;&#x5C31;&#x80FD;&#x5B9E;&#x73B0;</p>
+</blockquote>
+<h4 id="&#x5BA2;&#x6237;&#x7AEF;"><a name="&#x5BA2;&#x6237;&#x7AEF;" class="anchor-navigation-ex-anchor" href="#&#x5BA2;&#x6237;&#x7AEF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BA2;&#x6237;&#x7AEF;</h4>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.command;
+
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Client</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">// &#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;        // &#x5B8C;&#x6210;&#x901A;&#x8FC7;&#x9065;&#x63A7;&#x5668;&#x5BF9;&#x7535;&#x706F;&#x7684;&#x64CD;&#x4F5C;</span>
+
+        <span class="hljs-comment">// &#x521B;&#x5EFA;&#x7535;&#x706F;&#x7684;&#x5BF9;&#x8C61;,(&#x63A5;&#x53D7;&#x8005;</span>
+        LightReceiver lightReceiver = <span class="hljs-keyword">new</span> LightReceiver();
+        <span class="hljs-comment">// &#x521B;&#x5EFA;&#x7535;&#x706F;&#x7684;&#x76F8;&#x5173;&#x7684;&#x5F00;&#x5173;&#x547D;&#x4EE4;</span>
+        LightOnCommand lightOnCommand = <span class="hljs-keyword">new</span> LightOnCommand(lightReceiver);
+        <span class="hljs-comment">// &#x521B;&#x5EFA;&#x7535;&#x706F;&#x7684;&#x5F00;&#x5173;&#x547D;&#x4EE4;</span>
+        LightOffCommand lightOffCommand = <span class="hljs-keyword">new</span> LightOffCommand(lightReceiver);
+        <span class="hljs-comment">// &#x9700;&#x8981;&#x4E00;&#x4E2A;&#x9065;&#x63A7;&#x5668;</span>
+        RemoteController remoteController = <span class="hljs-keyword">new</span> RemoteController();
+        <span class="hljs-comment">//&#x7ED9;&#x6211;&#x4EEC;&#x7684;&#x9065;&#x63A7;&#x5668;&#x8BBE;&#x7F6E;&#x76F8;&#x5173;&#x7684;&#x547D;&#x4EE4;, &#x6BD4;&#x5982;no= 0 &#x7684;&#x662F;&#x7535;&#x706F;&#x7684;&#x5F00;&#x548C;&#x5173;&#x7684;&#x64CD;&#x4F5C;</span>
+        remoteController.setCommand(<span class="hljs-number">0</span>, lightOnCommand, lightOffCommand);
+
+        System.out.println(<span class="hljs-string">&quot;-----&#x6309;&#x4E0B;&#x706F;&#x7684;&#x5F00;&#x7684;&#x6309;&#x94AE;------&quot;</span>);
+        remoteController.onButtonWasPushed(<span class="hljs-number">0</span>);
+        System.out.println(<span class="hljs-string">&quot;-----&#x6309;&#x4E0B;&#x706F;&#x7684;&#x5173;&#x7684;&#x6309;&#x94AE;------&quot;</span>);
+        remoteController.offButtonWasPushed(<span class="hljs-number">0</span>);
+        System.out.println(<span class="hljs-string">&quot;-----&#x64A4;&#x9500;-----------------&quot;</span>);
+        remoteController.undoButtonWasPushed();
+        <span class="hljs-comment">/**
+         * -----&#x6309;&#x4E0B;&#x706F;&#x7684;&#x5F00;&#x7684;&#x6309;&#x94AE;------
+         * &#x7535;&#x706F;&#x6253;&#x5F00;&#x4E86;
+         * -----&#x6309;&#x4E0B;&#x706F;&#x7684;&#x5173;&#x7684;&#x6309;&#x94AE;------
+         * &#x7535;&#x706F;&#x5173;&#x95ED;&#x4E86;
+         * -----&#x64A4;&#x9500;-----------------
+         * &#x7535;&#x706F;&#x6253;&#x5F00;&#x4E86;
+         *
+         * Process finished with exit code 0
+         */</span>
+    }
+}
+</code></pre>
+<h3 id="&#x6269;&#x5C55;"><a name="&#x6269;&#x5C55;" class="anchor-navigation-ex-anchor" href="#&#x6269;&#x5C55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6269;&#x5C55;</h3>
+<blockquote>
+<p>&#x8981;&#x7B26;&#x5408;&#x5F00;&#x95ED;&#x539F;&#x5219;,&#x6240;&#x6709;&#x8FD9;&#x4E2A;RemoteController &#x5E94;&#x4E0D;&#x7528;&#x53D8;&#x5316;</p>
+</blockquote>
+<p>&#x52A0;&#x4E00;&#x4E2A;&#x7535;&#x89C6;&#x7684;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.command;
+
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TVReceiver</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">on</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;&#x7535;&#x89C6;&#x6253;&#x5F00;&#x4E86;&quot;</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">off</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;&#x7535;&#x89C6;&#x5173;&#x95ED;&#x4E86;&quot;</span>);
+    }
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.command;
+
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TVOnCommand</span>  <span class="hljs-keyword">implements</span> <span class="hljs-title">Command</span> </span>{
+    <span class="hljs-comment">//&#x805A;&#x5408;TVReceiver</span>
+    TVReceiver tv;
+
+    <span class="hljs-comment">//&#x6784;&#x9020;&#x5668;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">TVOnCommand</span><span class="hljs-params">(TVReceiver tv)</span> </span>{
+        <span class="hljs-keyword">super</span>();
+        <span class="hljs-keyword">this</span>.tv = tv;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">execute</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// &#x4F60;&#x8BA4;&#x4E3A;&#x5B83;&#x662F;&#x6253;&#x5F00;</span>
+        <span class="hljs-comment">// &#x8C03;&#x7528;&#x63A5;&#x53D7;&#x8005;&#x7684;&#x65B9;&#x6CD5;</span>
+        tv.on();
+
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">undo</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// &#x8C03;&#x7528;&#x63A5;&#x53D7;&#x8005;&#x7684;&#x65B9;&#x6CD5;</span>
+        tv.off();
+    }
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.command;
+
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TVOffCommand</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Command</span> </span>{
+    TVReceiver tv;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">TVOffCommand</span><span class="hljs-params">(TVReceiver tv)</span> </span>{
+        <span class="hljs-keyword">super</span>();
+        <span class="hljs-keyword">this</span>.tv = tv;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">execute</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// &#x8C03;&#x7528;&#x63A5;&#x53D7;&#x8005;&#x65B9;&#x6CD5;</span>
+        tv.off();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">undo</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// &#x8C03;&#x7528;&#x63A5;&#x53D7;&#x8005;&#x65B9;&#x6CD5;</span>
+        tv.on();
+    }
+}
+</code></pre>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x8C03;&#x7528;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.command;
+
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Client</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">// &#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;        // &#x5B8C;&#x6210;&#x901A;&#x8FC7;&#x9065;&#x63A7;&#x5668;&#x5BF9;&#x7535;&#x706F;&#x7684;&#x64CD;&#x4F5C;</span>
+        <span class="hljs-comment">// &#x9700;&#x8981;&#x4E00;&#x4E2A;&#x9065;&#x63A7;&#x5668;</span>
+        RemoteController remoteController = <span class="hljs-keyword">new</span> RemoteController();
+
+        <span class="hljs-comment">// &#x521B;&#x5EFA;&#x7535;&#x706F;&#x7684;&#x5BF9;&#x8C61;,(&#x63A5;&#x53D7;&#x8005;</span>
+        LightReceiver lightReceiver = <span class="hljs-keyword">new</span> LightReceiver();
+        <span class="hljs-comment">// &#x521B;&#x5EFA;&#x7535;&#x706F;&#x7684;&#x76F8;&#x5173;&#x7684;&#x5F00;&#x5173;&#x547D;&#x4EE4;</span>
+        LightOnCommand lightOnCommand = <span class="hljs-keyword">new</span> LightOnCommand(lightReceiver);
+        <span class="hljs-comment">// &#x521B;&#x5EFA;&#x7535;&#x706F;&#x7684;&#x5F00;&#x5173;&#x547D;&#x4EE4;</span>
+        LightOffCommand lightOffCommand = <span class="hljs-keyword">new</span> LightOffCommand(lightReceiver);
+        <span class="hljs-comment">//&#x7ED9;&#x6211;&#x4EEC;&#x7684;&#x9065;&#x63A7;&#x5668;&#x8BBE;&#x7F6E;&#x76F8;&#x5173;&#x7684;&#x547D;&#x4EE4;, &#x6BD4;&#x5982;no= 0 &#x7684;&#x662F;&#x7535;&#x706F;&#x7684;&#x5F00;&#x548C;&#x5173;&#x7684;&#x64CD;&#x4F5C;</span>
+        remoteController.setCommand(<span class="hljs-number">0</span>, lightOnCommand, lightOffCommand);
+        System.out.println(<span class="hljs-string">&quot;-----&#x6309;&#x4E0B;&#x706F;&#x7684;&#x5F00;&#x7684;&#x6309;&#x94AE;------&quot;</span>);
+        remoteController.onButtonWasPushed(<span class="hljs-number">0</span>);
+        System.out.println(<span class="hljs-string">&quot;-----&#x6309;&#x4E0B;&#x706F;&#x7684;&#x5173;&#x7684;&#x6309;&#x94AE;------&quot;</span>);
+        remoteController.offButtonWasPushed(<span class="hljs-number">0</span>);
+        System.out.println(<span class="hljs-string">&quot;-----&#x64A4;&#x9500;-----------------&quot;</span>);
+        remoteController.undoButtonWasPushed();
+
+        <span class="hljs-comment">// &#x521B;&#x5EFA;&#x7535;&#x89C6;&#x7684;&#x5BF9;&#x8C61;,(&#x63A5;&#x53D7;&#x8005;</span>
+        TVReceiver tvReceiver = <span class="hljs-keyword">new</span> TVReceiver();
+        <span class="hljs-comment">// &#x521B;&#x5EFA;&#x7535;&#x89C6;&#x7684;&#x76F8;&#x5173;&#x7684;&#x5F00;&#x5173;&#x547D;&#x4EE4;</span>
+        TVOnCommand tvOnCommand = <span class="hljs-keyword">new</span> TVOnCommand(tvReceiver);
+        <span class="hljs-comment">// &#x521B;&#x5EFA;&#x7535;&#x89C6;&#x7684;&#x5F00;&#x5173;&#x547D;&#x4EE4;</span>
+        TVOffCommand tvOffCommand = <span class="hljs-keyword">new</span> TVOffCommand(tvReceiver);
+        <span class="hljs-comment">//&#x7ED9;&#x6211;&#x4EEC;&#x7684;&#x9065;&#x63A7;&#x5668;&#x8BBE;&#x7F6E;&#x76F8;&#x5173;&#x7684;&#x547D;&#x4EE4;, &#x6BD4;&#x5982;no= 1 &#x7684;&#x662F;&#x7535;&#x89C6;&#x7684;&#x5F00;&#x548C;&#x5173;&#x7684;&#x64CD;&#x4F5C;</span>
+        remoteController.setCommand(<span class="hljs-number">1</span>, tvOnCommand, tvOffCommand);
+        System.out.println(<span class="hljs-string">&quot;-----&#x6309;&#x4E0B;&#x89C6;&#x7684;&#x5F00;&#x7684;&#x6309;&#x94AE;------&quot;</span>);
+        remoteController.onButtonWasPushed(<span class="hljs-number">1</span>);
+        System.out.println(<span class="hljs-string">&quot;-----&#x6309;&#x4E0B;&#x89C6;&#x7684;&#x5173;&#x7684;&#x6309;&#x94AE;------&quot;</span>);
+        remoteController.offButtonWasPushed(<span class="hljs-number">1</span>);
+        System.out.println(<span class="hljs-string">&quot;-----&#x64A4;&#x9500;-----------------&quot;</span>);
+        remoteController.undoButtonWasPushed();
+
+        <span class="hljs-comment">/**
+         *-----&#x6309;&#x4E0B;&#x706F;&#x7684;&#x5F00;&#x7684;&#x6309;&#x94AE;------
+         * &#x7535;&#x706F;&#x6253;&#x5F00;&#x4E86;
+         * -----&#x6309;&#x4E0B;&#x706F;&#x7684;&#x5173;&#x7684;&#x6309;&#x94AE;------
+         * &#x7535;&#x706F;&#x5173;&#x95ED;&#x4E86;
+         * -----&#x64A4;&#x9500;-----------------
+         * &#x7535;&#x706F;&#x6253;&#x5F00;&#x4E86;
+         * -----&#x6309;&#x4E0B;&#x89C6;&#x7684;&#x5F00;&#x7684;&#x6309;&#x94AE;------
+         * &#x7535;&#x89C6;&#x6253;&#x5F00;&#x4E86;
+         * -----&#x6309;&#x4E0B;&#x89C6;&#x7684;&#x5173;&#x7684;&#x6309;&#x94AE;------
+         * &#x7535;&#x89C6;&#x5173;&#x95ED;&#x4E86;
+         * -----&#x64A4;&#x9500;-----------------
+         * &#x7535;&#x89C6;&#x6253;&#x5F00;&#x4E86;
+         *
+         * Process finished with exit code 0
+         */</span>
+    }
+}
+</code></pre>
+</body></html>
                                 
                                 </section>
                             
@@ -2209,7 +2545,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"遥控控器","level":"1.17.2","depth":2,"next":{"title":"JDBC源码","level":"1.17.3","depth":2,"path":"103_命令模式_JDBC源码.md","ref":"./103_命令模式_JDBC源码.md","articles":[]},"previous":{"title":"工作原理","level":"1.17.1","depth":2,"path":"101_命令模式_工作原理.md","ref":"./101_命令模式_工作原理.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"101_命令模式_遥控控器.md","mtime":"2021-02-08T03:06:22.361Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-08T03:10:53.017Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"遥控控器","level":"1.17.2","depth":2,"next":{"title":"JDBC源码","level":"1.17.3","depth":2,"path":"103_命令模式_JDBC源码.md","ref":"./103_命令模式_JDBC源码.md","articles":[]},"previous":{"title":"工作原理","level":"1.17.1","depth":2,"path":"101_命令模式_工作原理.md","ref":"./101_命令模式_工作原理.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"101_命令模式_遥控控器.md","mtime":"2021-02-08T09:27:51.013Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-08T09:29:45.577Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
