@@ -2164,8 +2164,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;&#x5B9E;&#x8DF5;"><b></b>&#x4EE3;&#x7801;&#x5B9E;&#x8DF5;</a></li></ul></div><a href="#&#x4EE3;&#x7801;&#x5B9E;&#x8DF5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x4EE3;&#x7801;&#x5B9E;&#x8DF5;"><a name="&#x4EE3;&#x7801;&#x5B9E;&#x8DF5;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;&#x5B9E;&#x8DF5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EE3;&#x7801;&#x5B9E;&#x8DF5;</h1>
-<p> &#x623F;&#x5B50;</p>
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;&#x5B9E;&#x8DF5;"><b></b>&#x4EE3;&#x7801;&#x5B9E;&#x8DF5;</a></li></ul></div><a href="#&#x4EE3;&#x7801;&#x5B9E;&#x8DF5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x4EE3;&#x7801;&#x5B9E;&#x8DF5;"><a name="&#x4EE3;&#x7801;&#x5B9E;&#x8DF5;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;&#x5B9E;&#x8DF5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EE3;&#x7801;&#x5B9E;&#x8DF5;</h1>
+<h3 id="&#x623F;&#x5B50;"><a name="&#x623F;&#x5B50;" class="anchor-navigation-ex-anchor" href="#&#x623F;&#x5B50;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x623F;&#x5B50;</h3>
 <pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.builder.improve;
 
 <span class="hljs-comment">// &#x4EA7;&#x54C1; =&gt; Product</span>
@@ -2199,7 +2199,7 @@
     }
 }
 </code></pre>
-<p>&#x62BD;&#x8C61;&#x5EFA;&#x9020;&#x8005;</p>
+<h3 id="&#x62BD;&#x8C61;&#x5EFA;&#x9020;&#x8005;"><a name="&#x62BD;&#x8C61;&#x5EFA;&#x9020;&#x8005;" class="anchor-navigation-ex-anchor" href="#&#x62BD;&#x8C61;&#x5EFA;&#x9020;&#x8005;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x62BD;&#x8C61;&#x5EFA;&#x9020;&#x8005;</h3>
 <pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.builder.improve;
 
 <span class="hljs-comment">// &#x62BD;&#x8C61;&#x7684;&#x5EFA;&#x9020;&#x8005;</span>
@@ -2223,7 +2223,7 @@
     }
 }
 </code></pre>
-<p>&#x77EE;&#x697C;</p>
+<h3 id="&#x77EE;&#x697C;"><a name="&#x77EE;&#x697C;" class="anchor-navigation-ex-anchor" href="#&#x77EE;&#x697C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x77EE;&#x697C;</h3>
 <pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.builder.improve;
 
 <span class="hljs-comment">/**
@@ -2246,7 +2246,7 @@
     }
 }
 </code></pre>
-<p>&#x9AD8;&#x697C;</p>
+<h3 id="&#x9AD8;&#x697C;"><a name="&#x9AD8;&#x697C;" class="anchor-navigation-ex-anchor" href="#&#x9AD8;&#x697C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9AD8;&#x697C;</h3>
 <pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.builder.improve;
 
 
@@ -2267,7 +2267,41 @@
     }
 }
 </code></pre>
-<p>&#x4E3B;&#x65B9;&#x6CD5;(&#x5BA2;&#x6237;&#x7AEF;)&#x8C03;&#x7528;</p>
+<h3 id="housedirector"><a name="housedirector" class="anchor-navigation-ex-anchor" href="#housedirector"><i class="fa fa-link" aria-hidden="true"></i></a>HouseDirector</h3>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.builder.improve;
+
+
+<span class="hljs-comment">// &#x6307;&#x6325;&#x8005;,&#x53BB;&#x6307;&#x5B9A;&#x5236;&#x5B9A;&#x6D41;&#x7A0B;,&#x8FD4;&#x56DE;&#x4EA7;&#x54C1;</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HouseDirector</span> </span>{
+    <span class="hljs-comment">// &#x805A;&#x5408;&#x8FDB;&#x6765;</span>
+    HouseBuilder houseBuilder = <span class="hljs-keyword">null</span>;
+
+
+    <span class="hljs-comment">// &#x6784;&#x9020;&#x5668;&#x4F20;&#x5165;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">HouseDirector</span><span class="hljs-params">(HouseBuilder houseBuilder)</span> </span>{
+        <span class="hljs-keyword">this</span>.houseBuilder = houseBuilder;
+    }
+
+    <span class="hljs-comment">// &#x901A;&#x8FC7;setter&#x65B9;&#x6CD5;&#x4F20;&#x5165;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setHouseBuilder</span><span class="hljs-params">(HouseBuilder houseBuilder)</span> </span>{
+        <span class="hljs-keyword">this</span>.houseBuilder = houseBuilder;
+    }
+
+    <span class="hljs-comment">// &#x5982;&#x4F55;&#x5904;&#x7406;&#x5EFA;&#x9020;&#x623F;&#x5B50;&#x7684;&#x6D41;&#x7A0B;</span>
+    <span class="hljs-comment">// &#x4EA4;&#x7ED9;&#x4E86;&#x6307;&#x6325;&#x8005;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> House <span class="hljs-title">constructHouse</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// &#x5148;&#x6253;&#x5730;&#x57FA;</span>
+        houseBuilder.buildBasic();
+        <span class="hljs-comment">// &#x5728;&#x5899;</span>
+        houseBuilder.buildWalls();
+        <span class="hljs-comment">// &#x9876;</span>
+        houseBuilder.roofed();
+        <span class="hljs-comment">// &#x8FD4;&#x56DE;</span>
+        <span class="hljs-keyword">return</span> houseBuilder.buildHouse();
+    }
+}
+</code></pre>
+<h3 id="&#x4E3B;&#x65B9;&#x6CD5;&#x5BA2;&#x6237;&#x7AEF;&#x8C03;&#x7528;"><a name="&#x4E3B;&#x65B9;&#x6CD5;&#x5BA2;&#x6237;&#x7AEF;&#x8C03;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x4E3B;&#x65B9;&#x6CD5;&#x5BA2;&#x6237;&#x7AEF;&#x8C03;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E3B;&#x65B9;&#x6CD5;(&#x5BA2;&#x6237;&#x7AEF;)&#x8C03;&#x7528;</h3>
 <pre><code class="lang-java"><span class="hljs-keyword">package</span> com.atguigu.builder.improve;
 
 
@@ -2290,8 +2324,8 @@
     }
 }
 </code></pre>
-<p> <a href="img/mm/meizi22.jpg" data-lightbox="634c661d-24cf-47c1-ab45-97cea877c7d4" data-title=""><img src="img/mm/meizi22.jpg" alt=""></a>    </p>
-
+<p> <a href="img/mm/meizi22.jpg" data-lightbox="9b7ec1c8-6fcb-472a-8750-2164c06e2188" data-title=""><img src="img/mm/meizi22.jpg" alt=""></a>    </p>
+</body></html>
                                 
                                 </section>
                             
@@ -2334,7 +2368,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"代码演示","level":"1.8.3","depth":2,"next":{"title":"StringBuilder源码","level":"1.8.4","depth":2,"path":"58_建造者模式_源码分析.md","ref":"./58_建造者模式_源码分析.md","articles":[]},"previous":{"title":"4个角色","level":"1.8.2","depth":2,"path":"56_建造者模式_4个角色.md","ref":"./56_建造者模式_4个角色.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"57_建造者模式_代码演示.md","mtime":"2021-02-07T00:35:34.412Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-09T08:28:56.992Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"代码演示","level":"1.8.3","depth":2,"next":{"title":"StringBuilder源码","level":"1.8.4","depth":2,"path":"58_建造者模式_源码分析.md","ref":"./58_建造者模式_源码分析.md","articles":[]},"previous":{"title":"4个角色","level":"1.8.2","depth":2,"path":"56_建造者模式_4个角色.md","ref":"./56_建造者模式_4个角色.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"57_建造者模式_代码演示.md","mtime":"2021-02-09T12:58:31.699Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-09T13:01:55.447Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
