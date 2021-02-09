@@ -45,3 +45,7 @@ gitee仓库地址:[design_pattern](https://gitee.com/victorfengming/design_patte
 21. [状态模式](./136_状态模式_先看原理.md)
 22. [策略模式](./140_策略模式_鸭子问题.md)
 23. [职责链模式](./145_职责链模式_采购审批.md)   
+
+
+
+![](./img/QQ截图20210209164627.png)
