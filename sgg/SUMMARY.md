@@ -143,7 +143,6 @@
     - [代码实践](./147_职责链模式_代码实践.md)
     - [源码分析](./148_职责链模式_源码分析.md)
     - [内容梳理](./149_职责链模式_内容梳理.md)
-    
 - [课件]()    
     - [html](./00_design_pattern.md)    
     - [pdf](http://victorfengming.gitee.io/file/pdf/java_design_pattern.pdf)    
